@@ -1,0 +1,21 @@
+.page__header--header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: var(--spacing-6);
+}
+
+.page__header--header svg {
+  color: var(--colour-brand);
+  height: var(--size-8);
+  width: var(--size-8);
+}
+
+.page__header--subtitle {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-10);
+}
+
+hr {
+  margin: var(--spacing-10) 0 var(--spacing-12);
+}

@@ -1,0 +1,14 @@
+main {
+  display: flex;
+  flex: 1;
+}
+
+body {
+  overflow: hidden;
+}
+
+.base__layout {
+  display: flex;
+  height: 100vh;
+  background: var(--background-sunken);
+}

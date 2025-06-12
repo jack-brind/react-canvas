@@ -1,0 +1,85 @@
+.house__card {
+  background: var(--background-component-default);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-8);
+  max-width: 560px;
+  box-shadow: var(--shadow-stroked-lg);
+}
+
+.house-card__photo-container {
+  position: relative; /* This creates the positioning context */
+  width: 16.25rem;
+  height: 10rem;
+  flex-shrink: 0;
+}
+
+.house-card__photo {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.sold {
+  position: absolute;
+  top: var(--spacing-4);
+  right: var(--spacing-4);
+}
+
+.sold-tag {
+  background-color: var(--colour-red);
+  color: var(--colour-white);
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-semibold);
+}
+
+.house__card--details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  flex: 1;
+}
+
+.house__card--price {
+  font-size: var(--font-size-8);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  flex: 1;
+  margin-top: var(--spacing-4);
+}
+
+.details {
+  font-weight: var(--font-weight-medium);
+}
+
+.bed-bath {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+}
+
+.icon-count {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.nav__buttons {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  justify-content: flex-end;
+  max-width: 560px;
+  margin-top: var(--spacing-10);
+}
+
+.count {
+  margin-right: var(--spacing-6);
+}

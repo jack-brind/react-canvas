@@ -1,0 +1,44 @@
+.nav-links {
+  /* Reset all button styles */
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  display: flex;
+  gap: var(--spacing-4);
+  padding: var(--spacing-3) var(--spacing-3) var(--spacing-3) var(--spacing-4);
+  align-items: center;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25rem;
+  letter-spacing: -0.00406rem;
+}
+
+.active {
+  background-color: var(--background-sidebar-item-active);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-stroked-sm);
+}
+
+.active svg {
+  color: var(--colour-brand);
+}
+
+.nav-links:hover:not(.active) {
+  background-color: var(--background-sidebar-item-hover);
+  color: var(--text-primary);
+}
+
+.nav-links:active {
+  transform: scale(0.98);
+  transition: transform 0.05s ease-in-out;
+}

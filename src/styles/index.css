@@ -1,0 +1,169 @@
+@import "./primitives.css";
+@import "./reset.css";
+
+@layer primitives, reset, base, components, utilities;
+
+@layer base {
+  /* #region Fonts */
+  @font-face {
+    font-family: "Inter";
+    font-weight: 100 900;
+    font-style: normal;
+    src: url("/fonts/InterVariable.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Inter";
+    font-weight: 100 900;
+    font-style: italic;
+    src: url("/fonts/InterVariable-Italic.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Inter Display";
+    font-weight: 400;
+    src: url("/fonts/InterDisplay-Regular.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Inter Display";
+    font-weight: 500;
+    src: url("/fonts/InterDisplay-Medium.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Inter Display";
+    font-weight: 600;
+    src: url("/fonts/InterDisplay-SemiBold.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Monaspace";
+    font-weight: 300 800;
+    src: url("/fonts/MonaspaceNeonVarVF.woff2") format("woff2");
+  }
+  /*#endregion*/
+
+  :root {
+    color-scheme: light dark;
+    --background-primary: var(--colour-white);
+    --background-sunken: var(--colour-neutral-50);
+    --background-subtle: var(--colour-neutral-25);
+    --background-component-default: var(--colour-white);
+    --background-component-hover: var(--colour-neutral-50);
+    --background-component-active: var(--colour-white);
+    --background-sidebar-item-hover: var(--colour-neutral-100);
+    --background-sidebar-item-active: var(--colour-white);
+    --border-default: var(--colour-neutral-100);
+    --border-alpha: rgba(74, 74, 82, 0.12);
+    --text-primary: var(--colour-neutral-900);
+    --text-secondary: var(--colour-neutral-700);
+    --text-muted: var(--colour-neutral-500);
+    --text-subtle: var(--colour-neutral-400);
+    --text-selection: var(--colour-neutral-100);
+    --colour-brand: var(--colour-blue);
+    --text-selection-background: oklch(from var(--colour-blue) l c h / 25%);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-primary: var(--colour-neutral-1000);
+      --background-sunken: var(--colour-neutral-1100);
+      --background-subtle: var(--colour-neutral-950);
+      --background-component-default: var(--colour-neutral-900);
+      --background-component-hover: var(--colour-neutral-800);
+      --background-component-button-default: var(--colour-neutral-900);
+      --background-component-button-hover: var(--colour-neutral-800);
+      --background-component-active: var(--colour-neutral-600);
+      --background-sidebar-item-hover: var(--colour-neutral-800);
+      --background-sidebar-item-active: var(--colour-neutral-900);
+      --border-default: oklch(0.3 0.01 256.88);
+      --border-alpha: rgba(74, 74, 82, 0.12);
+      --text-primary: var(--colour-neutral-50);
+      --text-secondary: var(--colour-neutral-100);
+      --text-muted: var(--colour-neutral-300);
+      --text-selection: var(--colour-neutral-700);
+      --colour-brand: oklch(from var(--colour-blue) calc(l + 0.2) c h);
+      --text-selection-background: oklch(
+        from var(--colour-neutral-300) l c h / 50%
+      );
+    }
+  }
+
+  ::selection {
+    background: var(--text-selection-background);
+    color: inherit;
+  }
+
+  body {
+    --body-width: 49.5rem;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-size: var(--font-size-9);
+    font-weight: var(--font-weight-semibold);
+    color: inherit;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: var(--font-size-7);
+    font-weight: var(--font-weight-semibold);
+    color: inherit;
+  }
+  h3 {
+    font-family: var(--font-display);
+    font-size: var(--font-size-6);
+    font-weight: var(--font-weight-semibold);
+    color: inherit;
+  }
+
+  p {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-5);
+    font-weight: var(--font-weight-regular);
+    color: inherit;
+  }
+
+  p + p {
+    margin-top: var(--spacing-7);
+  }
+}
+
+@layer components {
+  .lucide {
+    color: var(--text-primary);
+    width: var(--size-4);
+    height: var(--size-4);
+    stroke-width: var(--thickness-thicker);
+  }
+
+  .button__default {
+    display: inline-flex;
+    padding: var(--spacing-3);
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--radius-md);
+    background: var(--background-component-default);
+    color: var(--text-secondary);
+    box-shadow: var(--shadow-stroked-sm);
+  }
+
+  .button__default:hover {
+    background: var(--background-component-hover);
+  }
+
+  .button__default:disabled {
+    opacity: 0.5;
+    background: var(--background-component-default);
+  }
+
+  hr {
+    color: var(--border-default);
+    border-style: solid;
+    border-top-width: 0.5px;
+    border-top-color: var(--border-default);
+    margin: var(--spacing-6) 0;
+  }
+}

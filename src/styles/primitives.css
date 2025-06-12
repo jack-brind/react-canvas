@@ -1,0 +1,129 @@
+@layer primitives {
+  :root {
+    --colour-neutral-10: oklch(0.985 0.001 286.38);
+    --colour-neutral-25: oklch(0.982 0.003 264.54);
+    --colour-neutral-50: oklch(0.952 0.003 264.54);
+    --colour-neutral-100: oklch(0.901 0.005 258.33);
+    --colour-neutral-200: oklch(0.841 0.008 260.73);
+    --colour-neutral-300: oklch(0.668 0.013 259.82);
+    --colour-neutral-400: oklch(0.645 0.015 262.36);
+    --colour-neutral-500: oklch(0.541 0.012 261.77);
+    --colour-neutral-600: oklch(0.51 0.012 261.77);
+    --colour-neutral-700: oklch(0.441 0.011 258.36);
+    --colour-neutral-800: oklch(0.367 0.009 260.72);
+    --colour-neutral-900: oklch(0.33 0.013 273.01);
+    --colour-neutral-950: oklch(0.31 0.013 272.96);
+    --colour-neutral-1000: oklch(0.244 0.006 271.17);
+    --colour-neutral-1100: oklch(0.231 0.004 264.48);
+    --colour-white: oklch(1 0 0);
+    --colour-black: oklch(0 0 0);
+
+    /* Colours - accents */
+    --colour-blue: oklch(0.563 0.1796 263.8);
+    --colour-purple: oklch(0.55 0.2467 311.29);
+    --colour-red: oklch(0.638 0.2373 25.44);
+    
+    /* Font families */
+    --font-sans: "Inter", -apple-system, sans-serif;
+    --font-display: "Inter Display", -apple-system, sans-serif;
+    --font-mono: "Monaspace", monospace;
+
+    /* Font sizes */
+    --font-size-1: 0.5625rem; /* 9px */
+    --font-size-2: 0.688rem; /* 11px */
+    --font-size-3: 0.75rem; /* 12px */
+    --font-size-4: 0.8125rem; /* 13px */
+    --font-size-5: 0.9375rem; /* 15px */
+    --font-size-6: 1.125rem; /* 18px */
+    --font-size-7: 1.25rem; /* 20px */
+    --font-size-8: 1.5rem; /* 24px */
+    --font-size-9: 2rem; /* 32px */
+    --font-size-10: 2.5rem; /* 40px */
+    /* Radius */
+    --radius-none: 0rem;
+    --radius-xs: 0.125rem; /* 2px */
+    --radius-sm: 0.25rem; /* 4px */
+    --radius-md: 0.375rem; /* 6px */
+    --radius-lg: 0.5rem; /* 8px */
+    --radius-xl: 0.75rem; /* 12px */
+    --radius-2xl: 1rem; /* 16px */
+    --radius-max: 50rem; /* 800px */
+
+    /* Thickness */
+    --thickness-none: 0rem;
+    --thickness-thinner: 0.0313rem; /* 0.5px */
+    --thickness-thin: 0.0469rem; /* 0.75px */
+    --thickness-default: 0.0625rem; /* 1px */
+    --thickness-thick: 0.0938rem; /* 1.5px */
+    --thickness-thicker: 0.125rem; /* 2px */
+    --thickness-extra-thick: 0.1563rem; /* 2.5px */
+    --thickness-thickest: 0.1875rem; /* 3px */
+
+    /* Sizes */
+    --size-1: 0.25rem; /* 4px */
+    --size-2: 0.5rem; /* 8px */
+    --size-3: 0.75rem; /* 12px */
+    --size-4: 1rem; /* 16px */
+    --size-5: 1.25rem; /* 20px */
+    --size-6: 1.5rem; /* 24px */
+    --size-7: 2rem; /* 32px */
+    --size-8: 2.5rem; /* 40px */
+    --size-9: 3rem; /* 48px */
+    --size-10: 3.5rem; /* 56px */
+    --size-11: 4rem; /* 64px */
+    --size-12: 5rem; /* 80px */
+    --size-13: 6rem; /* 96px */
+    --size-14: 7.5rem; /* 120px */
+
+    /* Font weights */
+    --font-weight-regular: 450;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+
+    /* Spacing */
+    --spacing-1: 0.125rem; /* 2px */
+    --spacing-2: 0.25rem; /* 4px */
+    --spacing-3: 0.375rem; /* 6px */
+    --spacing-4: 0.5rem; /* 8px */
+    --spacing-5: 0.625rem; /* 10px */
+    --spacing-6: 0.75rem; /* 12px */
+    --spacing-7: 1rem; /* 16px */
+    --spacing-8: 1.25rem; /* 20px */
+    --spacing-9: 1.5rem; /* 24px */
+    --spacing-10: 2rem; /* 32px */
+    --spacing-11: 2.5rem; /* 40px */
+    --spacing-12: 3rem; /* 48px */
+    --spacing-13: 3.5rem; /* 56px */
+    --spacing-14: 4rem; /* 64px */
+    --spacing-15: 4.5rem; /* 72px */
+    --spacing-16: 5rem; /* 80px */
+
+    /* Shadows */
+    --shadow-xs: 0 1px 2px 0 rgba(28, 29, 34, 0.06);
+    --shadow-sm: 0 1px 2px 0 rgba(28, 29, 34, 0.12);
+    --shadow-md: 0 2px 2px -1px rgba(28, 29, 34, 0.04),
+      0 4px 12px -1px rgba(28, 29, 34, 0.08);
+    --shadow-lg: 0 2px 2px -1px rgba(28, 29, 34, 0.04),
+      0 8px 16px -2px rgba(28, 29, 34, 0.12);
+    --shadow-xl: 0 2px 2px -1px rgba(28, 29, 34, 0.04),
+      0 16px 24px -6px rgba(28, 29, 34, 0.16);
+    --shadow-stroked-xs: 0 0 0 var(--thickness-default)
+        oklch(from var(--colour-neutral-900) l c h / 8%),
+      0 1px 2px 0 rgba(28, 29, 34, 0.06);
+    --shadow-stroked-sm: 0 0 0 var(--thickness-default)
+        oklch(from var(--colour-neutral-900) l c h / 8%),
+      0 2px 3px -3px rgba(28, 29, 34, 0.08), 0 1px 2px 0 rgba(28, 29, 34, 0.12);
+    --shadow-stroked-md: 0 0 0 var(--thickness-default)
+        oklch(from var(--colour-neutral-900) l c h / 8%),
+      0 2px 2px -1px rgba(28, 29, 34, 0.04),
+      0 6px 12px -1px rgba(28, 29, 34, 0.08);
+    --shadow-stroked-lg: 0 0 0 var(--thickness-default)
+        oklch(from var(--colour-neutral-900) l c h / 8%),
+      0 2px 2px -1px rgba(28, 29, 34, 0.04),
+      0 8px 16px -2px rgba(28, 29, 34, 0.12);
+    --shadow-stroked-xl: 0 0 0 var(--thickness-default)
+        oklch(from var(--colour-neutral-900) l c h / 8%),
+      0 2px 2px -1px rgba(28, 29, 34, 0.04),
+      0 16px 24px -6px rgba(28, 29, 34, 0.16);
+  }
+}
