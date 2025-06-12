@@ -12,7 +12,7 @@ import house10 from "../../../assets/houses/house10.jpg";
 const houses = [
   {
     addressLineOne: "35 Longhorn Road",
-    Town: "Tenterden",
+    town: "Tenterden",
     postalCode: "TN30 5RH",
     propertyType: "Detatached",
     beds: 5,
@@ -23,7 +23,7 @@ const houses = [
   },
   {
     addressLineOne: "21 Woodbury Lane",
-    Town: "Clapham",
+    town: "Clapham",
     postalCode: "SW4 9NQ",
     propertyType: "Detatached",
     beds: 6,
@@ -34,7 +34,7 @@ const houses = [
   },
   {
     addressLineOne: "5 The Willows",
-    Town: "Canterbury",
+    town: "Canterbury",
     postalCode: "CT1 2PX",
     propertyType: "Detached",
     beds: 4,
@@ -45,7 +45,7 @@ const houses = [
   },
   {
     addressLineOne: "Flat 12 Marina Court",
-    Town: "Margate",
+    town: "Margate",
     postalCode: "CT9 1QW",
     propertyType: "Detatched",
     beds: 4,
@@ -56,7 +56,7 @@ const houses = [
   },
   {
     addressLineOne: "42 Church Lane",
-    Town: "Ashford",
+    town: "Ashford",
     postalCode: "TN23 1RD",
     propertyType: "Terraced",
     beds: 3,
@@ -67,7 +67,7 @@ const houses = [
   },
   {
     addressLineOne: "8 Victoria Gardens",
-    Town: "Dover",
+    town: "Dover",
     postalCode: "CT16 1EP",
     propertyType: "Semi-detached",
     beds: 3,
@@ -78,7 +78,7 @@ const houses = [
   },
   {
     addressLineOne: "The Old Rectory",
-    Town: "Sandwich",
+    town: "Sandwich",
     postalCode: "CT13 9JH",
     propertyType: "Detached",
     beds: 5,
@@ -89,7 +89,7 @@ const houses = [
   },
   {
     addressLineOne: "15 Mill Road",
-    Town: "Folkestone",
+    town: "Folkestone",
     postalCode: "CT19 4AX",
     propertyType: "Detached",
     beds: 4,
@@ -100,7 +100,7 @@ const houses = [
   },
   {
     addressLineOne: "Penthouse 1, Harbour View",
-    Town: "Whitstable",
+    town: "Whitstable",
     postalCode: "CT5 1BG",
     propertyType: "Detached",
     beds: 5,
@@ -111,7 +111,7 @@ const houses = [
   },
   {
     addressLineOne: "4 Oak Tree Close",
-    Town: "Sevenoaks",
+    town: "Sevenoaks",
     postalCode: "TN13 2YU",
     propertyType: "Detached",
     beds: 4,

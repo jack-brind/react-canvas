@@ -7,7 +7,7 @@ import houses from "./Houses.js";
 
 function House({
   addressLineOne,
-  Town,
+  town,
   postalCode,
   propertyType,
   beds,
@@ -29,7 +29,7 @@ function House({
       <div className="house__card--details">
         <h2>{addressLineOne}</h2>
         <div className="details">
-          {Town}, {postalCode}
+          {town}, {postalCode}
         </div>
         <div className="details">{propertyType}</div>
         <div className="bed-bath">
@@ -56,20 +56,11 @@ function House({
 
 function Houses() {
   const [currentHouse, setCurrentHouse] = useState(0);
+  const house = houses[currentHouse];
 
   return (
     <>
-      <House
-        addressLineOne={houses[currentHouse].addressLineOne}
-        Town={houses[currentHouse].Town}
-        postalCode={houses[currentHouse].postalCode}
-        propertyType={houses[currentHouse].propertyType}
-        beds={houses[currentHouse].beds}
-        baths={houses[currentHouse].baths}
-        price={houses[currentHouse].price}
-        isSold={houses[currentHouse].isSold}
-        photo={houses[currentHouse].photo}
-      />
+      <House {...house} />
 
       <div className="nav__buttons">
         <span className="count">{`${currentHouse + 1} of ${houses.length}`}</span>
