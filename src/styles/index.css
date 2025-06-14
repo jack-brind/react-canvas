@@ -139,6 +139,13 @@
     stroke-width: var(--thickness-thicker);
   }
 
+  .tabler-icon {
+    color: var(--text-primary);
+    width: 1.125rem; /* 18px */
+    height: 1.125rem; /* 18px */
+    stroke-width: 1.75;
+  }
+
   .button__default {
     display: inline-flex;
     padding: var(--spacing-3);

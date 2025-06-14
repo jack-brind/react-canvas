@@ -10,8 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tabler/icons": "^3.34.0",
+    "@tabler/icons-react": "^3.34.0",
+    "date-fns": "^4.1.0",
     "feather-icons": "^4.29.2",
     "lucide-react": "^0.513.0",
+    "phosphor-icons": "^1.4.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
