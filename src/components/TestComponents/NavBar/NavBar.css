@@ -1,0 +1,195 @@
+.breakpoint-harness {
+  max-width: 39rem;
+  background: var(--colour-purple-40);
+}
+
+.navigation__toggle {
+  display: none;
+}
+
+.segment {
+  display: inline-flex;
+  background: var(--colour-neutral-50);
+  padding: var(--spacing-1);
+  border-radius: var(--radius-lg);
+  gap: var(--spacing-2);
+  margin: var(--spacing-4) 0 var(--spacing-15) 0;
+}
+
+.segment-control__option {
+  padding: var(--spacing-3) var(--spacing-5);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-medium);
+  color: var(--colour-neutral-700);
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.segment-control__option--active {
+  background: var(--colour-white);
+  color: var(--colour-neutral-1000);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav__container {
+  --outline-width: 1px;
+  display: flex;
+  container-type: inline-size;
+  container-name: navigation-bar;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  outline: var(--outline-width) dashed fuchsia;
+  width: 100%;
+  padding: 0 var(--spacing-10);
+  height: var(--size-10);
+  border-bottom: var(--thickness-default) solid var(--border-default);
+  z-index: 100;
+  /* -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px); */
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navigation__items {
+  display: flex;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-1);
+  ist-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation__home {
+  display: flex;
+  gap: var(--spacing-6);
+  align-items: center;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.nav__name {
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+}
+
+.nav__title {
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary);
+}
+
+.navigation__links {
+  text-decoration: none;
+  padding: var(--spacing-3) var(--spacing-5);
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-4);
+  border-radius: var(--radius-sm);
+  transition:
+    background 0.1s ease,
+    color 0.1s ease;
+}
+
+.navigation__links:hover {
+  background: var(--colour-neutral-50);
+  color: var(--text-primary);
+}
+
+.navigation__links-container {
+  display: flex;
+}
+
+@container navigation-bar (width: 40rem) {
+  .navigation {
+    flex-direction: column;
+    outline: 2px solid red;
+  }
+  .navigation__toggle {
+    display: flex;
+  }
+
+  .navigation__links-container {
+    display: none;
+  }
+}
+
+/* 1. Container query setup */
+.navbar-container {
+  container-type: inline-size;
+  /* Optional: container-name: navbar; */
+}
+
+/* 2. Base styles (desktop) */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-8) var(--spacing-10);
+  background: var(--colour-white);
+  box-shadow: var(--shadow-xs);
+}
+
+.navbar__profile {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.navbar__navItems {
+  display: flex;
+  gap: var(--spacing-10);
+}
+
+.navbar__hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: var(--font-size-9);
+}
+
+.navbar__mobilePanel {
+  display: none;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  background: var(--colour-white);
+  box-shadow: var(--shadow-md);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: var(--spacing-10) 0;
+}
+
+/* 3. Container query for mobile (breakpoint-xs) */
+@container (max-width: var(--breakpoint-xs)) {
+  .navbar__navItems {
+    display: none;
+  }
+  .navbar__hamburger {
+    display: block;
+  }
+  .navbar__mobilePanel {
+    display: flex;
+  }
+  .navbar {
+    padding: var(--spacing-8) var(--spacing-6);
+  }
+}
+
+/* 4. Hide mobile panel by default, show when open (React state) */
+.navbar__mobilePanel--hidden {
+  display: none !important;
+}
+.navbar__mobilePanel--visible {
+  display: flex !important;
+}

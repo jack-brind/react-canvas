@@ -1,0 +1,35 @@
+shopping-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.shopping-list__item {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  border-radius: var(--radius-md);
+  background-color: var(--bg-secondary);
+}
+
+.shopping-list__item--name {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  padding: 2px 0px;
+  gap: 4px;
+  font-size: var(--font-size-5);
+  color: var(--text-primary);
+  user-select: none;
+}
+
+.packed {
+  text-decoration: line-through;
+  color: var(--text-secondary);
+}
+
+li {
+  cursor: pointer;
+}

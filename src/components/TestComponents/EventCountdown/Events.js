@@ -19,14 +19,14 @@ export const events = [
     isFavourite: true,
     repeats: false,
   },
-  //   {
-  //     eventName: "Glastonbury festival",
-  //     date: new Date(2025, 5, 25),
-  //     categories: [eventCategories[2], eventCategories[8]],
-  //     photo: "/events/glastonbury.png",
-  //     isFavourite: false,
-  //     repeats: false,
-  //   },
+  {
+    eventName: "Glastonbury festival",
+    date: new Date(2025, 5, 25),
+    categories: [eventCategories[2], eventCategories[8]],
+    photo: "/events/glastonbury.png",
+    isFavourite: false,
+    repeats: false,
+  },
   {
     eventName: "Christmas",
     date: new Date(2025, 11, 25),

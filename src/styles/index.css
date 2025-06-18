@@ -61,8 +61,66 @@
     --text-muted: var(--colour-neutral-500);
     --text-subtle: var(--colour-neutral-400);
     --text-selection: var(--colour-neutral-100);
-    --colour-brand: var(--colour-blue);
-    --text-selection-background: oklch(from var(--colour-blue) l c h / 25%);
+    --colour-brand: var(--colour-blue-50);
+    --text-selection-background: oklch(from var(--colour-blue-50) l c h / 25%);
+
+    /* Custom backgrounds */
+    --background-blue-bold: var(--colour-blue-50);
+    --background-blue-subtle: var(--colour-blue-40);
+    --background-blue-subtlest: var(--colour-blue-35);
+    --background-cyan-bold: var(--colour-cyan-50);
+    --background-cyan-subtle: var(--colour-cyan-40);
+    --background-cyan-subtlest: var(--colour-cyan-35);
+    --background-green-bold: var(--colour-green-50);
+    --background-green-subtle: var(--colour-green-40);
+    --background-green-subtlest: var(--colour-green-35);
+    --background-red-bold: var(--colour-red-50);
+    --background-red-subtle: var(--colour-red-40);
+    --background-red-subtlest: var(--colour-red-35);
+    --background-orange-bold: var(--colour-orange-50);
+    --background-orange-subtle: var(--colour-orange-40);
+    --background-orange-subtlest: var(--colour-orange-35);
+    --background-yellow-bold: var(--colour-yellow-50);
+    --background-yellow-subtle: var(--colour-yellow-40);
+    --background-yellow-subtlest: var(--colour-yellow-35);
+    --background-purple-bold: var(--colour-purple-50);
+    --background-purple-subtle: var(--colour-purple-40);
+    --background-purple-subtlest: var(--colour-purple-35);
+    --background-pink-bold: var(--colour-pink-50);
+    --background-pink-subtle: var(--colour-pink-40);
+    --background-pink-subtlest: var(--colour-pink-35);
+    --background-grey-bold: var(--colour-grey-50);
+    --background-grey-subtle: var(--colour-grey-40);
+    --background-grey-subtlest: var(--colour-grey-35);
+
+    /* Text on custom backgrounds */
+    --text-blue: var(--colour-blue-50);
+    --text-on-blue-subtle: var(--colour-blue-55);
+    --text-on-blue-subtlest: var(--colour-blue-55);
+    --text-cyan: var(--colour-cyan-50);
+    --text-on-cyan-subtle: var(--colour-cyan-55);
+    --text-on-cyan-subtlest: var(--colour-cyan-55);
+    --text-green: var(--colour-green-50);
+    --text-on-green-subtle: var(--colour-green-55);
+    --text-on-green-subtlest: var(--colour-green-55);
+    --text-red: var(--colour-red-50);
+    --text-on-red-subtle: var(--colour-red-55);
+    --text-on-red-subtlest: var(--colour-red-55);
+    --text-orange: var(--colour-orange-50);
+    --text-on-orange-subtle: var(--colour-orange-55);
+    --text-on-orange-subtlest: var(--colour-orange-55);
+    --text-yellow: var(--colour-yellow-50);
+    --text-on-yellow-subtle: var(--colour-yellow-60);
+    --text-on-yellow-subtlest: var(--colour-yellow-60);
+    --text-purple: var(--colour-purple-50);
+    --text-on-purple-subtle: var(--colour-purple-55);
+    --text-on-purple-subtlest: var(--colour-purple-55);
+    --text-pink: var(--colour-pink-50);
+    --text-on-pink-subtle: var(--colour-pink-55);
+    --text-on-pink-subtlest: var(--colour-pink-55);
+    --text-grey: var(--colour-grey-50);
+    --text-on-grey-subtle: var(--colour-grey-55);
+    --text-on-grey-subtlest: var(--colour-grey-55);
   }
 
   @media (prefers-color-scheme: dark) {
@@ -83,11 +141,42 @@
       --text-secondary: var(--colour-neutral-100);
       --text-muted: var(--colour-neutral-300);
       --text-selection: var(--colour-neutral-700);
-      --colour-brand: oklch(from var(--colour-blue) calc(l + 0.2) c h);
+      --colour-brand: oklch(from var(--colour-blue-50) calc(l + 0.2) c h);
       --text-selection-background: oklch(
         from var(--colour-neutral-300) l c h / 50%
       );
     }
+  }
+
+  html[data-theme="light"] {
+    color-scheme: light !important;
+  }
+
+  html[data-theme="dark"] {
+    color-scheme: dark !important;
+  }
+
+  html[data-theme="dark"] :root {
+    --background-primary: var(--colour-neutral-1000);
+    --background-sunken: var(--colour-neutral-1100);
+    --background-subtle: var(--colour-neutral-950);
+    --background-component-default: var(--colour-neutral-900);
+    --background-component-hover: var(--colour-neutral-800);
+    --background-component-button-default: var(--colour-neutral-900);
+    --background-component-button-hover: var(--colour-neutral-800);
+    --background-component-active: var(--colour-neutral-600);
+    --background-sidebar-item-hover: var(--colour-neutral-800);
+    --background-sidebar-item-active: var(--colour-neutral-900);
+    --border-default: oklch(0.3 0.01 256.88);
+    --border-alpha: rgba(74, 74, 82, 0.12);
+    --text-primary: var(--colour-neutral-50);
+    --text-secondary: var(--colour-neutral-100);
+    --text-muted: var(--colour-neutral-300);
+    --text-selection: var(--colour-neutral-700);
+    --colour-brand: oklch(from var(--colour-blue-50) calc(l + 0.2) c h);
+    --text-selection-background: oklch(
+      from var(--colour-neutral-300) l c h / 50%
+    );
   }
 
   ::selection {

@@ -3,7 +3,13 @@ import {
   IdCard,
   House,
   BetweenHorizontalStart,
+  ShoppingCart,
+  CircleUserRound,
+  LayoutPanelTop,
+  ListPlus,
 } from "lucide-react";
+
+import { IconShoppingCart } from "@tabler/icons-react";
 
 const pages = [
   {
@@ -22,9 +28,29 @@ const pages = [
     icon: CalendarCheck2,
   },
   {
+    link: "shoppingList",
+    caption: "Shopping List",
+    icon: IconShoppingCart,
+  },
+  {
     link: "profileCard",
     caption: "Profile Card",
     icon: IdCard,
+  },
+  {
+    link: "avatar",
+    caption: "Avatars",
+    icon: CircleUserRound,
+  },
+  {
+    link: "navBar",
+    caption: "Navigation Bar",
+    icon: LayoutPanelTop,
+  },
+  {
+    link: "accordion",
+    caption: "Accordion",
+    icon: ListPlus,
   },
 ];
 

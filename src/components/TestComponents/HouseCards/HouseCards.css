@@ -32,7 +32,7 @@
 }
 
 .sold-tag {
-  background-color: var(--colour-red);
+  background-color: oklch(63.7% 0.237 25.331);
   color: var(--colour-white);
   padding: var(--spacing-1) var(--spacing-2);
   border-radius: var(--radius-sm);

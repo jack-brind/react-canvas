@@ -1,5 +1,6 @@
 @layer primitives {
   :root {
+    /* Colours - neutrals */
     --colour-neutral-10: oklch(0.985 0.001 286.38);
     --colour-neutral-25: oklch(0.982 0.003 264.54);
     --colour-neutral-50: oklch(0.952 0.003 264.54);
@@ -19,10 +20,78 @@
     --colour-black: oklch(0 0 0);
 
     /* Colours - accents */
-    --colour-blue: oklch(0.563 0.1796 263.8);
-    --colour-purple: oklch(0.55 0.2467 311.29);
-    --colour-red: oklch(0.638 0.2373 25.44);
-    
+    /* Greys */
+    --colour-grey-35: oklch(0.97 0.01 240);
+    --colour-grey-40: oklch(0.93 0.01 240);
+    --colour-grey-45: oklch(0.65 0.02 240);
+    --colour-grey-50: oklch(0.55 0.02 240);
+    --colour-grey-55: oklch(0.28 0.02 240);
+    --colour-grey-60: oklch(0.21 0.02 240);
+
+    /* Blues */
+    --colour-blue-35: oklch(0.97 0.02 260);
+    --colour-blue-40: oklch(0.94 0.04 260);
+    --colour-blue-45: oklch(0.67 0.12 260);
+    --colour-blue-50: oklch(0.56 0.15 260);
+    --colour-blue-55: oklch(0.43 0.17 260);
+    --colour-blue-60: oklch(0.32 0.16 260);
+
+    /* Cyans */
+    --colour-cyan-35: oklch(0.98 0.02 200);
+    --colour-cyan-40: oklch(0.94 0.04 200);
+    --colour-cyan-45: oklch(0.72 0.08 200);
+    --colour-cyan-50: oklch(0.62 0.1 200);
+    --colour-cyan-55: oklch(0.42 0.06 200);
+    --colour-cyan-60: oklch(0.3 0.04 200);
+
+    /* Greens */
+    --colour-green-35: oklch(0.97 0.02 150);
+    --colour-green-40: oklch(0.95 0.06 150);
+    --colour-green-45: oklch(0.75 0.12 150);
+    --colour-green-50: oklch(0.68 0.13 150);
+    --colour-green-55: oklch(0.42 0.08 150);
+    --colour-green-60: oklch(0.3 0.04 150);
+
+    /* Reds */
+    --colour-red-35: oklch(0.98 0.02 20);
+    --colour-red-40: oklch(0.95 0.04 20);
+    --colour-red-45: oklch(0.72 0.1 20);
+    --colour-red-50: oklch(0.64 0.15 20);
+    --colour-red-55: oklch(0.46 0.12 20);
+    --colour-red-60: oklch(0.27 0.06 20);
+
+    /* Oranges */
+    --colour-orange-35: oklch(0.97 0.03 60);
+    --colour-orange-40: oklch(0.93 0.06 60);
+    --colour-orange-45: oklch(0.78 0.1 60);
+    --colour-orange-50: oklch(0.75 0.11 60);
+    --colour-orange-55: oklch(0.48 0.08 60);
+    --colour-orange-60: oklch(0.35 0.04 60);
+
+    /* Yellows */
+    --colour-yellow-35: oklch(0.97 0.04 90);
+    --colour-yellow-40: oklch(0.94 0.06 90);
+    --colour-yellow-45: oklch(0.88 0.11 90);
+    --colour-yellow-50: oklch(0.82 0.15 90);
+    --colour-yellow-55: oklch(0.68 0.12 90);
+    --colour-yellow-60: oklch(0.35 0.08 90);
+
+    /* Purples */
+    --colour-purple-35: oklch(0.98 0.02 300);
+    --colour-purple-40: oklch(0.93 0.05 300);
+    --colour-purple-45: oklch(0.7 0.14 300);
+    --colour-purple-50: oklch(0.61 0.16 300);
+    --colour-purple-55: oklch(0.4 0.13 300);
+    --colour-purple-60: oklch(0.29 0.08 300);
+
+    /* Pinks */
+    --colour-pink-35: oklch(0.97 0.03 340);
+    --colour-pink-40: oklch(0.92 0.07 340);
+    --colour-pink-45: oklch(0.69 0.15 340);
+    --colour-pink-50: oklch(0.64 0.18 340);
+    --colour-pink-55: oklch(0.4 0.12 340);
+    --colour-pink-60: oklch(0.26 0.08 340);
+
     /* Font families */
     --font-sans: "Inter", -apple-system, sans-serif;
     --font-display: "Inter Display", -apple-system, sans-serif;
@@ -125,5 +194,12 @@
         oklch(from var(--colour-neutral-900) l c h / 8%),
       0 2px 2px -1px rgba(28, 29, 34, 0.04),
       0 16px 24px -6px rgba(28, 29, 34, 0.16);
+
+    /* Breakpoints */
+    --breakpoint-xs: 40rem; /* 640px mobile */
+    --breakpoint-sm: 48rem; /* 768px tablet */
+    --breakpoint-md: 64rem; /* 1024px small desktop */
+    --breakpoint-lg: 80rem; /* 1280px laptop */
+    --breakpoint-xl: 96rem; /* 1536px large screen */
   }
 }

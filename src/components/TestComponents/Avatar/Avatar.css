@@ -1,0 +1,193 @@
+/* Base avatar */
+.avatar {
+  position: relative;
+  border-radius: var(--radius-max);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-sans);
+  flex-shrink: 0;
+}
+
+.avatar:before {
+  content: "";
+  position: absolute;
+  border: 1px solid var(--border-alpha);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+/* Sizes */
+/* 16px */
+.avatar--2xs {
+  width: var(--size-4);
+  height: var(--size-4);
+  font-size: 7px;
+  font-weight: 700;
+}
+
+/* 20px */
+.avatar--xs {
+  width: var(--size-5);
+  height: var(--size-5);
+  font-size: var(--font-size-1);
+}
+
+/* 24px */
+.avatar--sm {
+  width: var(--size-6);
+  height: var(--size-6);
+  font-size: var(--font-size-2);
+}
+
+/* 32px */
+.avatar--md {
+  width: var(--size-7);
+  height: var(--size-7);
+  font-size: var(--font-size-3);
+}
+
+/* 40px */
+.avatar--lg {
+  width: var(--size-8);
+  height: var(--size-8);
+  font-size: var(--font-size-5);
+}
+
+/* 48px */
+.avatar--xl {
+  width: var(--size-9);
+  height: var(--size-9);
+  font-size: var(--font-size-6);
+}
+
+/* 56px */
+.avatar--2xl {
+  width: var(--size-10);
+  height: var(--size-10);
+  font-size: var(--font-size-7);
+}
+
+/* 64px */
+.avatar--3xl {
+  width: var(--size-11);
+  height: var(--size-11);
+  font-size: var(--font-size-8);
+}
+
+/* Colours */
+.avatar--grey {
+  background-color: var(--background-grey-subtle);
+  color: var(--text-on-grey-subtle);
+}
+.avatar--blue {
+  background-color: var(--background-blue-subtle);
+  color: var(--text-on-blue-subtle);
+}
+.avatar--cyan {
+  background-color: var(--background-cyan-subtle);
+  color: var(--text-on-cyan-subtle);
+}
+.avatar--green {
+  background-color: var(--background-green-subtle);
+  color: var(--text-on-green-subtle);
+}
+.avatar--red {
+  background-color: var(--background-red-subtle);
+  color: var(--text-on-red-subtle);
+}
+.avatar--orange {
+  background-color: var(--background-orange-subtle);
+  color: var(--text-on-orange-subtle);
+}
+.avatar--yellow {
+  background-color: var(--background-yellow-subtle);
+  color: var(--text-on-yellow-subtle);
+}
+.avatar--purple {
+  background-color: var(--background-purple-subtle);
+  color: var(--text-on-purple-subtle);
+}
+.avatar--pink {
+  background-color: var(--background-pink-subtle);
+  color: var(--text-on-pink-subtle);
+}
+
+/* Content styles */
+.avatar__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.clip {
+  overflow: hidden;
+}
+
+.avatar__initials {
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* Icon sizes for fallback avatars - 60% of avatar size */
+.avatar-icon--2xs {
+  width: calc(var(--size-4) * 0.48);
+  height: calc(var(--size-4) * 0.48);
+  color: var(--text-secondary);
+}
+.avatar-icon--xs {
+  width: calc(var(--size-5) * 0.48);
+  height: calc(var(--size-5) * 0.48);
+  color: var(--text-secondary);
+}
+.avatar-icon--sm {
+  width: calc(var(--size-6) * 0.48);
+  height: calc(var(--size-6) * 0.48);
+  color: var(--text-secondary);
+}
+.avatar-icon--md {
+  width: calc(var(--size-7) * 0.48);
+  height: calc(var(--size-7) * 0.48);
+  color: var(--text-secondary);
+}
+.avatar-icon--lg {
+  width: calc(var(--size-8) * 0.48);
+  height: calc(var(--size-8) * 0.48);
+  color: var(--text-secondary);
+}
+.avatar-icon--xl {
+  width: calc(var(--size-9) * 0.48);
+  height: calc(var(--size-9) * 0.48);
+  color: var(--text-secondary);
+}
+.avatar-icon--2xl {
+  width: calc(var(--size-10) * 0.48);
+  height: calc(var(--size-10) * 0.48);
+  color: var(--text-secondary);
+}
+.avatar-icon--3xl {
+  width: calc(var(--size-11) * 0.48);
+  height: calc(var(--size-11) * 0.48);
+  color: var(--text-secondary);
+}
+
+/* Photo avatars don't need background color */
+.avatar--photo {
+  background-color: transparent;
+}
+
+/* Status indicator */
+.avatar__status {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 25%;
+  height: 25%;
+  background-color: #10b981;
+  border: 2px solid white;
+  border-radius: 50%;
+}
