@@ -1,7 +1,7 @@
 import "./ShoppingList.css";
 import PageContent from "../../PageContent/PageContent.jsx";
 import pages from "../../../pages.js";
-import { IconCircleCheckFilled, IconCircleCheck } from "@tabler/icons-react";
+import { TbCircleCheckFilled, TbCircleCheck } from "react-icons/tb";
 import { shoppingList } from "./ShoppingList";
 import { useState } from "react";
 
@@ -48,7 +48,7 @@ function AddItem() {
         onChange={handleQuantity}
       />
       <button className="button__default">
-        <IconCircleCheckFilled />
+        <TbCircleCheckFilled />
       </button>
     </>
   );
@@ -65,9 +65,9 @@ function ShoppingItem({ name, quantity, categories, isPacked }) {
     <li className="shopping-list__item" onClick={handlePacked}>
       <button onClick={handlePacked}>
         {packed ? (
-          <IconCircleCheckFilled color="#02B17B" />
+          <TbCircleCheckFilled color="#02B17B" />
         ) : (
-          <IconCircleCheck color="var(--colour-neutral-100)" />
+          <TbCircleCheck color="var(--colour-neutral-100)" />
         )}
       </button>
       <div className="shopping-list__item--name">

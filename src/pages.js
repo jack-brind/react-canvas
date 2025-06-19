@@ -9,7 +9,7 @@ import {
   ListPlus,
 } from "lucide-react";
 
-import { IconShoppingCart } from "@tabler/icons-react";
+import { TbShoppingCart, TbChecklist } from "react-icons/tb";
 
 const pages = [
   {
@@ -30,7 +30,7 @@ const pages = [
   {
     link: "shoppingList",
     caption: "Shopping List",
-    icon: IconShoppingCart,
+    icon: TbShoppingCart,
   },
   {
     link: "profileCard",
@@ -51,6 +51,11 @@ const pages = [
     link: "accordion",
     caption: "Accordion",
     icon: ListPlus,
+  },
+  {
+    link: "checkout",
+    caption: "Checkout",
+    icon: TbChecklist,
   },
 ];
 

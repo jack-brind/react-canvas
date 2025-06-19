@@ -4,7 +4,7 @@ import pages from "../../../pages.js";
 import { eventsAscending } from "./Events.js";
 import { differenceInCalendarDays, format } from "date-fns";
 import { Star, RefreshCcw } from "lucide-react";
-import { IconMobiledata, IconRotateClockwise2 } from "@tabler/icons-react";
+import { TbMobiledata, TbRotateClockwise2 } from "react-icons/tb";
 
 import { useState } from "react";
 
@@ -49,7 +49,7 @@ function Event({ name, date, days, categories, photo, repeats }) {
             <p className="name">{name}</p>
             {repeats && (
               <div className="pill">
-                <IconRotateClockwise2 />
+                <TbRotateClockwise2 />
                 Repeats
               </div>
             )}
@@ -68,7 +68,7 @@ function Event({ name, date, days, categories, photo, repeats }) {
                 </p>
               )}
               <button onClick={() => setShowDate(!showDate)}>
-                <IconMobiledata />
+                <TbMobiledata />
               </button>
             </div>
           </div>

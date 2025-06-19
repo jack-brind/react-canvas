@@ -7,6 +7,7 @@ import NavigationBar from "../TestComponents/NavBar/NavBar.jsx";
 import Tabs from "../TestComponents/Tabs/Tabs";
 import { Avatars } from "../TestComponents/Avatar/Avatar.jsx";
 import Accordion from "../TestComponents/Accordion/Accordion";
+import Checkout from "../TestComponents/Checkout/Checkout";
 
 function ContentArea({ currentPage }) {
   const pageComponents = {
@@ -18,6 +19,7 @@ function ContentArea({ currentPage }) {
     avatar: <Avatars />,
     navBar: <NavigationBar />,
     accordion: <Accordion />,
+    checkout: <Checkout />,
   };
   return (
     <div className="floating__content">

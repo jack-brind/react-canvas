@@ -9,13 +9,7 @@ import {
   generateRandomFaceFemale,
 } from "../../../helpers/generateRandomFace.js";
 
-import {
-  IconToggleLeft,
-  IconToggleRight,
-  IconShieldLockFilled,
-  IconStar,
-  IconStarFilled,
-} from "@tabler/icons-react";
+import { TbStarFilled } from "react-icons/tb";
 
 // Parent component
 function UserList() {
@@ -69,7 +63,7 @@ function User({ name, jobTitle, isAdmin, gender, hasImage }) {
         <h3>{name}</h3>
         <p>{jobTitle}</p>
         <button className="button__default" onClick={handleAdmin}>
-          <IconStarFilled
+          <TbStarFilled
             color={admin ? "#FFC700" : "var(--colour-neutral-100)"}
           />
         </button>
