@@ -1,0 +1,6 @@
+.social-links__container {
+  display: flex;
+  gap: var(--spacing-4);
+  align-items: center;
+  margin-top: 80px;
+}

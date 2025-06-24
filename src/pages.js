@@ -7,6 +7,7 @@ import {
   CircleUserRound,
   LayoutPanelTop,
   ListPlus,
+  Shapes,
 } from "lucide-react";
 
 import { TbShoppingCart, TbChecklist } from "react-icons/tb";
@@ -56,6 +57,11 @@ const pages = [
     link: "checkout",
     caption: "Checkout",
     icon: TbChecklist,
+  },
+  {
+    link: "objectCrud",
+    caption: "Object CRUD",
+    icon: Shapes,
   },
 ];
 

@@ -1,0 +1,133 @@
+/* Modal.css */
+.modal__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--background-dimmed);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  /* backdrop-filter: blur(4px); */
+}
+
+.modal {
+  background: var(--background-component-default);
+  border-radius: 8px;
+  padding: 24px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-stroked-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-content: space-between;
+}
+
+.modal__sm {
+  max-width: 448px;
+  width: 90%;
+}
+.modal__md {
+  max-width: 560px;
+  width: 90%;
+}
+.modal__lg {
+  max-width: 640px;
+  width: 90%;
+}
+
+.modal__header {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-7);
+}
+
+.modal__header--details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.modal__icon svg {
+  height: var(--size-6);
+  width: var(--size-6);
+  color: var(--text-secondary);
+}
+
+.modal__header-and-subtitle {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal__title {
+  font-weight: var(--font-weight-medium);
+}
+
+.modal__subtitle {
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5rem;
+}
+
+.modal__content {
+  flex: 1;
+  outline: 1px dashed fuchsia;
+}
+
+.modal__buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.modal__button {
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25rem; /* 153.846% */
+  letter-spacing: -0.00406rem;
+}
+
+.modal__button--cancel {
+  background: white;
+  color: var(--text-secondary);
+}
+
+.modal__button--cancel:hover {
+  background: var(--background-component-hover);
+  color: var(--text-primary);
+}
+
+.modal__button--confirm {
+  background: var(--colour-brand);
+  color: white;
+}
+
+.modal__button--confirm:hover {
+  filter: brightness(1.1);
+  color: white;
+}

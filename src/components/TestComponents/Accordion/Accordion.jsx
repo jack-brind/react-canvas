@@ -53,7 +53,7 @@ function Accoridon() {
       <PageContent
         icon={<currentPageData.icon size={32} />}
         title={currentPageData.caption}
-        subtitle="Accordion component"
+        subtitle="This accordion component mirrors many others and only shows one item at a time. I might add a toggle in the future to allow multiple items to be open at a time as well."
       />
       <div>
         <h2>Apple Order FAQs</h2>

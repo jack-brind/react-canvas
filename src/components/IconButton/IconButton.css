@@ -1,0 +1,42 @@
+.icon-button__ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  transition: background 0.2s ease;
+}
+
+.icon-button__ghost:hover {
+  background: var(--background-component-hover);
+  color: var(--text-primary);
+}
+
+.icon-button__default {
+  background: var(--background-component-default);
+  color: var(--text-secondary);
+  box-shadow: var(--shadow-stroked-xs);
+  transition: background 0.2s ease;
+}
+
+.icon-button__default:hover {
+  background: var(--background-component-hover);
+  color: var(--text-primary);
+}
+
+.icon-button__md {
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.icon-button__md > * {
+  height: 16px;
+  width: 16px;
+}
+
+.icon-button__sm {
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.icon-button__sm > * {
+  height: 16px;
+  width: 16px;
+}

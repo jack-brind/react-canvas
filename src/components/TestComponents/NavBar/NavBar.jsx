@@ -5,6 +5,7 @@ import { useState } from "react";
 import Avatar from "../Avatar/AvatarComponent.jsx";
 import navItems from "./NavBar.js";
 import { Menu, X } from "lucide-react";
+import SocialLinks from "../SocialLinks/SocialLinks";
 
 // Segment to choose the breakpoint - to be moved into separate file at some point
 function Segments() {
@@ -106,6 +107,7 @@ function NavigationBar() {
       <div className="breakpoint-harness">
         <div className="navbar-container">
           <Navigation />
+          <SocialLinks />
         </div>
       </div>
     </>

@@ -1,85 +1,161 @@
-.house__card {
-  background: var(--background-component-default);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-6);
+.item__container {
   display: flex;
-  flex-direction: row;
-  gap: var(--spacing-8);
-  max-width: 560px;
-  box-shadow: var(--shadow-stroked-lg);
-}
-
-.house-card__photo-container {
-  position: relative; /* This creates the positioning context */
-  width: 16.25rem;
-  height: 10rem;
-  flex-shrink: 0;
-}
-
-.house-card__photo {
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  height: 100%;
-  border-radius: var(--radius-md);
-  object-fit: cover;
-  display: block;
-  image-rendering: -webkit-optimize-contrast;
+  gap: var(--spacing-9);
 }
 
-.sold {
-  position: absolute;
-  top: var(--spacing-4);
-  right: var(--spacing-4);
-}
-
-.sold-tag {
-  background-color: oklch(63.7% 0.237 25.331);
-  color: var(--colour-white);
-  padding: var(--spacing-1) var(--spacing-2);
-  border-radius: var(--radius-sm);
-  font-size: var(--font-size-4);
-  font-weight: var(--font-weight-semibold);
-}
-
-.house__card--details {
+.checkout {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-2);
-  flex: 1;
+  padding: 20px;
+  background: var(--background-default);
+  border-radius: 8px;
+  box-shadow: var(--shadow-stroked-md);
+  overflow: hidden;
+  width: 80%;
+  margin: 0 auto;
 }
 
-.house__card--price {
-  font-size: var(--font-size-8);
-  font-weight: var(--font-weight-semibold);
+.basket-header {
+  margin-bottom: var(--spacing-9);
+}
+
+.item__thumbnail {
+  width: var(--size-13);
+  height: var(--size-13);
+  background: var(--background-sunken);
+  border-radius: var(--radius-md);
+}
+
+.basket-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: var(--spacing-10);
+  margin-bottom: var(--spacing-14);
+}
+
+.discount-section {
+  display: flex;
+  gap: var(--spacing-6);
+  align-items: center;
+  margin-bottom: var(--spacing-9);
+}
+
+.apply-button {
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25rem; /* 153.846% */
+  letter-spacing: -0.00406rem;
+  background: var(--colour-brand);
+  color: white;
+}
+.apply-button:hover {
+  filter: brightness(1.1);
+}
+
+.item__details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--spacing-6);
+}
+
+.item__title-metadata {
+  display: flex;
+  flex-direction: column;
+}
+
+.metadata {
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-regular);
+  color: var(--text-secondary);
+}
+
+.item__details--quantity {
+  width: 56px;
+}
+
+.item__price {
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-medium);
   color: var(--text-primary);
-  flex: 1;
-  margin-top: var(--spacing-4);
 }
 
-.details {
+.code-check {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.valid-code p,
+invalid-code p {
+  font-size: var(--font-size-5);
   font-weight: var(--font-weight-medium);
 }
 
-.bed-bath {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-8);
+.valid-code svg,
+.valid-code p {
+  color: var(--colour-green-50);
 }
 
-.icon-count {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-4);
+.invalid-code svg,
+.invalid-code p {
+  color: var(--colour-red-50);
 }
 
-.nav__buttons {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-4);
-  justify-content: flex-end;
-  max-width: 560px;
-  margin-top: var(--spacing-10);
+.banner-icon {
+  width: var(--size-5);
+  height: var(--size-5);
+  color: var(--text-on-blue-subtlest);
 }
 
-.count {
-  margin-right: var(--spacing-6);
+.banner-text {
+  font-size: var(--font-size-5);
+  color: var(--text-on-blue-subtlest);
+  font-weight: var(--font-weight-regular);
+}
+
+.banner-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: var(--spacing-6) var(--spacing-5);
+  background: var(--background-blue-subtlest);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-9);
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+  margin-bottom: var(--spacing-9);
+  align-items: flex-end;
+}
+
+.summary-label {
+  display: flex;
+  gap: var(--spacing-6);
+}
+
+.summary-label span {
+  width: 120px;
+  text-align: right;
+}
+
+.pay {
+  height: 40px;
+  width: 120px;
+  align-self: center;
+  margin: 40px 0;
 }
