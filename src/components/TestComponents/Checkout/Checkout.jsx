@@ -18,7 +18,7 @@ export default function Checkout() {
       <PageContent
         icon={<currentPageData.icon size={32} />}
         title={currentPageData.caption}
-        subtitle="This checkout component is intended to simulate a shopping cart and paying the price for the item(s). It gives me practice with lifting state and composing components."
+        subtitle="This checkout component is intended to simulate a shopping cart and paying the price for the item(s). It includes lots of practice with state (+ lifting up state and derived state) as well as event handlers and component composition. Each time an item is removed or the quantity is changed, the price updates. You get free delivery if you spend over £1,000 and you can apply one of the following discount codes: WELCOME5, SUMMER10 or MEGADEAL20."
       />
       <CheckoutComponent />
     </>
@@ -290,7 +290,7 @@ function BasketSummary({ subtotal, discountAmount, shipping }) {
       </div>
       <div className="summary-label">
         <h4>Shipping</h4>
-        <span>{shipping > 0 ? currencyDisplay(shipping) : "Free"}</span>
+        <span>{shipping > 0 ? currencyDisplay(shipping) : "FREE"}</span>
       </div>
       {discountAmount > 0 && (
         <div className="summary-label">
@@ -318,7 +318,9 @@ function Pay({ total }) {
   return (
     <button
       className="apply-button pay"
-      onClick={() => alert(`${currencyDisplay(total)} paid`)}
+      onClick={() =>
+        alert(`✓ Payment successful – ${currencyDisplay(total)} paid!`)
+      }
     >{`Pay ${currencyDisplay(total)}`}</button>
   );
 }
