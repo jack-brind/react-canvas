@@ -1,4 +1,4 @@
-export const basketItems = [
+export const apple = [
   {
     id: 1,
     name: "Pro Display XDR",
@@ -38,6 +38,57 @@ export const basketItems = [
     price: 29,
     metadata: ["White", "240W", "2m"],
     thumbnail: "cable",
+  },
+];
+
+export const furniture = [
+  {
+    id: 1,
+    name: "Harvey Stripe Green Cushion",
+    quantity: 3,
+    price: 49,
+    metadata: ["Feather inner", "100% cotton"],
+    thumbnail: "cushion",
+  },
+  {
+    id: 2,
+    name: "Berkeley Bedside Table",
+    quantity: 2,
+    price: 225,
+    metadata: ["Nordic Oak", "2-drawer", "Assembled"],
+    thumbnail: "bedside-table",
+  },
+  {
+    id: 3,
+    name: "Rattan Medium Table Lamp",
+    quantity: 2,
+    price: 85,
+    metadata: ["Ecru-coloured shade", "Natural rattan base"],
+    thumbnail: "lamp",
+  },
+  {
+    id: 4,
+    name: "Nettleton Garden Lounge Set",
+    quantity: 1,
+    price: 1899,
+    metadata: ["Durable acacia wood", "Season-resistant cushions"],
+    thumbnail: "sofa",
+  },
+  {
+    id: 5,
+    name: "'Cali' Framed Art",
+    quantity: 1,
+    price: 75,
+    metadata: ["Artist: Dan Hobday", "White wooden frame"],
+    thumbnail: "picture",
+  },
+  {
+    id: 6,
+    name: "Ravello Pot with Handles",
+    quantity: 1,
+    price: 29,
+    metadata: ["Made with a crackle white glaze"],
+    thumbnail: "pot",
   },
 ];
 

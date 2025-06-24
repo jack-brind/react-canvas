@@ -2,7 +2,8 @@ import "./Checkout.css";
 import { useState } from "react";
 import PageContent from "../../PageContent/PageContent.jsx";
 import pages from "../../../pages.js";
-import { basketItems, discountCodes } from "./basket.js";
+import { furniture, discountCodes } from "./basket.js";
+// import { apple, discountCodes } from "./basket.js";
 import { RxCross2 } from "react-icons/rx";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import { Check, X, Delete } from "lucide-react";
@@ -27,7 +28,7 @@ export default function Checkout() {
 
 // Main checkout component
 function CheckoutComponent() {
-  const [basketData, setBasketData] = useState(basketItems);
+  const [basketData, setBasketData] = useState(furniture);
   const [appliedDiscount, setAppliedDiscount] = useState(null);
 
   // Quantity derived from basketData state
@@ -115,6 +116,7 @@ function CheckoutComponent() {
         shipping={shippingCost}
         shippingCost={shippingCost}
         discountAmount={discountAmount}
+        discount={appliedDiscount}
         shipping={shipping}
       />
 
@@ -179,7 +181,8 @@ function BasketItem({ item, onQuantityChange, onDeleteItem }) {
   return (
     <>
       <div className="item__thumbnail">
-        <img src={`/basket/${item.thumbnail}.png`} />
+        <img src={`/furniture/${item.thumbnail}.png`} />
+        {/* <img src={`/basket/${item.thumbnail}.png`} /> */}
       </div>
       <div className="item__details">
         <div className="item__title-metadata">
@@ -281,7 +284,7 @@ function DiscountCodes({ codes, onDiscountApply }) {
 }
 
 // Basket summary component
-function BasketSummary({ subtotal, discountAmount, shipping }) {
+function BasketSummary({ subtotal, discountAmount, shipping, discount }) {
   return (
     <div className="summary">
       <div className="summary-label">
@@ -294,7 +297,7 @@ function BasketSummary({ subtotal, discountAmount, shipping }) {
       </div>
       {discountAmount > 0 && (
         <div className="summary-label">
-          <h4>Discount</h4>
+          <h4>{`Discount (${discount.discount}%)`}</h4>
           <span>{currencyDisplay(discountAmount)}</span>
         </div>
       )}
