@@ -93,7 +93,7 @@ function TabContent({
             {timezone}
           </div>
 
-          <div className="data-1 summary">
+          <div className="data-1 tab-summary">
             <TextQuote color="var(--text-secondary)" />
             <h4 className="header-label">Summary</h4>
           </div>

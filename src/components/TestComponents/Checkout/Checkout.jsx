@@ -6,10 +6,12 @@ import { furniture, discountCodes } from "./basket.js";
 // import { apple, discountCodes } from "./basket.js";
 import { RxCross2 } from "react-icons/rx";
 import { RiDeleteBin5Fill } from "react-icons/ri";
-import { Check, X, Delete } from "lucide-react";
+import { Check, X, Delete, ShoppingBasket } from "lucide-react";
 import currencyDisplay from "../../../helpers/currencyDisplay";
 import IconButton from "../../IconButton/IconButton";
+import Banner from "../../Banner/Banner";
 import { IoInformationCircleSharp } from "react-icons/io5";
+import Tick from "../../../assets/icons/Tick";
 
 // ============ Housing component ============
 export default function Checkout() {
@@ -73,7 +75,13 @@ function CheckoutComponent() {
   const shippingThreshold = 1000;
   const shippingCost = 8.99;
 
-  const shipping = subtotal < shippingThreshold ? shippingCost : 0;
+  const shipping =
+    basketQuantity > 1 && subtotal < shippingThreshold ? shippingCost : 0;
+
+  const calcShipping = function (a, b) {
+    return a - b;
+  };
+  const shippingResult = calcShipping(shippingThreshold, subtotal);
 
   // Calculated discount amount
   const total = subtotal - discountAmount + shipping;
@@ -85,7 +93,12 @@ function CheckoutComponent() {
     <div className="checkout">
       {/* Shipping information banner */}
       {subtotal < shippingThreshold ? (
-        <Banner shippingThreshold={shippingThreshold} subtotal={subtotal} />
+        <Banner
+          intent="information"
+          isSlim
+          shippingThreshold={shippingThreshold}
+          subtotal={subtotal}
+        >{`Spend another ${currencyDisplay(shippingResult)} to qualify for free delivery!`}</Banner>
       ) : (
         ""
       )}
@@ -95,7 +108,10 @@ function CheckoutComponent() {
 
       {/* Items in the basket */}
       {basketData < 1 ? (
-        "No items in basket!"
+        <div className="no-items">
+          <ShoppingBasket className="no-items-icon" />
+          <p>No items in basket</p>
+        </div>
       ) : (
         <BasketItems
           items={basketData}
@@ -125,21 +141,6 @@ function CheckoutComponent() {
 
       {/* Button to pay for the basket */}
       <Pay total={total} />
-    </div>
-  );
-}
-
-// Shipping banner component
-function Banner({ shippingThreshold, subtotal }) {
-  const calcShipping = function (a, b) {
-    return a - b;
-  };
-  const shippingResult = calcShipping(shippingThreshold, subtotal);
-
-  return (
-    <div className="banner-container">
-      <IoInformationCircleSharp className="banner-icon" />
-      <span className="banner-text">{`Spend another ${currencyDisplay(shippingResult)} to qualify for free delivery!`}</span>
     </div>
   );
 }
@@ -311,7 +312,7 @@ function BasketTotal({ total, vat }) {
     <div className="summary">
       <h2>Total: {currencyDisplay(total)}</h2>
       {/* VAT calculation based on subtotal */}
-      <p>{`Includes VAT of ${currencyDisplay(vat)}`}</p>
+      <p className="vat__summary">{`Includes VAT of ${currencyDisplay(vat)}`}</p>
     </div>
   );
 }

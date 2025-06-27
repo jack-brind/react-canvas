@@ -9,6 +9,7 @@ import { Avatars } from "../TestComponents/Avatar/Avatar.jsx";
 import Accordion from "../TestComponents/Accordion/Accordion";
 import Checkout from "../TestComponents/Checkout/Checkout";
 import ObjectCrud from "../TestComponents/ObjectCrud/ObjectCrud";
+import CaseStudyHeaderComponent from "../TestComponents/CaseStudyHeader/CaseStudyHeader";
 
 function ContentArea({ currentPage }) {
   const pageComponents = {
@@ -22,6 +23,7 @@ function ContentArea({ currentPage }) {
     accordion: <Accordion />,
     checkout: <Checkout />,
     objectCrud: <ObjectCrud />,
+    caseStudyHeader: <CaseStudyHeaderComponent />,
   };
   return (
     <div className="floating__content">

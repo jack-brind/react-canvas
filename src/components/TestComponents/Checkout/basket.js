@@ -71,7 +71,7 @@ export const furniture = [
     name: "Nettleton Garden Lounge Set",
     quantity: 1,
     price: 1899,
-    metadata: ["Durable acacia wood", "Season-resistant cushions"],
+    metadata: ["Durable acacia wood", "Season-resistant"],
     thumbnail: "sofa",
   },
   {

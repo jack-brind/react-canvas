@@ -19,6 +19,7 @@ function Modal({
   if (!isOpen) return null;
 
   const handleBackdropClick = (e) => {
+    console.log(e);
     if (e.target === e.currentTarget) {
       onClose();
     }

@@ -8,6 +8,7 @@ import {
   LayoutPanelTop,
   ListPlus,
   Shapes,
+  FileText,
 } from "lucide-react";
 
 import { TbShoppingCart, TbChecklist } from "react-icons/tb";
@@ -62,6 +63,11 @@ const pages = [
     link: "objectCrud",
     caption: "Object CRUD",
     icon: Shapes,
+  },
+  {
+    link: "caseStudyHeader",
+    caption: "Case Study Header",
+    icon: FileText,
   },
 ];
 

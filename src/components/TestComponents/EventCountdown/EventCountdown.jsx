@@ -5,8 +5,8 @@ import { eventsAscending } from "./Events.js";
 import { differenceInCalendarDays, format } from "date-fns";
 import { Star, RefreshCcw } from "lucide-react";
 import { TbMobiledata, TbRotateClockwise2 } from "react-icons/tb";
-
 import { useState } from "react";
+import SearchInput from "../../SearchInput/SearchInput";
 
 // Day calculation helper
 function getDays(date) {
@@ -14,10 +14,58 @@ function getDays(date) {
   return daysUntil;
 }
 
-function Events() {
+function EventCountdown() {
+  const currentPageData = pages.find((page) => page.link === "eventCountdown");
+  const [term, setTerm] = useState("");
+  const [showOldEvents, setShowOldEvents] = useState(true);
+
+  return (
+    <>
+      <PageContent
+        icon={<currentPageData.icon size={32} />}
+        title={currentPageData.caption}
+        subtitle="This component is a series of Countdown cards that countdown to an event. This uses date-fns for calculating dates and eventually, will have some filters and a way to favourite cards which will be displayed in a separate section."
+      />
+
+      <SearchInput
+        searchTerm={term}
+        onSearchChange={setTerm}
+        placeholder="Filter by name..."
+        width="340px"
+      />
+
+      <div className="checkbox">
+        <input
+          type="checkbox"
+          id="old-events"
+          name="old-events"
+          checked={showOldEvents}
+          onChange={(e) => setShowOldEvents(e.target.checked)}
+        />
+        <label htmlFor="old-events">Show old events</label>
+      </div>
+
+      <Events term={term} oldEvents={showOldEvents} />
+    </>
+  );
+}
+
+function Events({ term, oldEvents }) {
+  const filtered = eventsAscending
+    .filter((event) =>
+      event.eventName.toLowerCase().includes(term.toLowerCase()),
+    )
+    .filter((event) => {
+      if (oldEvents) {
+        return true;
+      } else {
+        return getDays(event.date) >= 0;
+      }
+    });
+
   return (
     <div className="event__rail">
-      {eventsAscending.map((event) => (
+      {filtered.map((event) => (
         <Event
           key={event.eventName}
           name={event.eventName}
@@ -82,21 +130,6 @@ function Event({ name, date, days, categories, photo, repeats }) {
         </div>
       </div>
     </div>
-  );
-}
-
-function EventCountdown() {
-  const currentPageData = pages.find((page) => page.link === "eventCountdown");
-
-  return (
-    <>
-      <PageContent
-        icon={<currentPageData.icon size={32} />}
-        title={currentPageData.caption}
-        subtitle="This component is a series of Countdown cards that countdown to an event. This uses date-fns for calculating dates and eventually, will have some filters and a way to favourite cards which will be displayed in a separate section."
-      />
-      <Events />
-    </>
   );
 }
 

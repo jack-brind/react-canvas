@@ -1,0 +1,27 @@
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  color: var(--text-subtle);
+  height: 14px;
+  width: 14px;
+}
+
+.clear-icon {
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  transform: translateY(-50%);
+  color: var(--text-subtle);
+}
+
+.clear-icon-svg {
+  width: 12px !important;
+  height: 12px !important;
+  cursor: pointer;
+}
+
+.search-container {
+  position: relative;
+}

@@ -1,0 +1,116 @@
+.metadata__container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.metadata__rail {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: var(--spacing-11);
+}
+
+.metadata__text--label {
+  overflow: hidden;
+  color: var(--text-secondary, #4f5359);
+  text-overflow: ellipsis;
+  font-family: Inter;
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25rem; /* 153.846% */
+  letter-spacing: -0.00406rem;
+}
+
+.metadata__text--value {
+  color: var(--text-secondary);
+  /* text/md/medium */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25rem; /* 153.846% */
+  letter-spacing: -0.00406rem;
+}
+
+.key-impact {
+  margin-bottom: 1.25rem;
+}
+
+.metadata__text--label-highlight {
+  overflow: hidden;
+  color: var(--text-secondary);
+  text-overflow: ellipsis;
+  font-family: Inter;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.625rem; /* 173.333% */
+  letter-spacing: -0.01406rem;
+}
+
+.version {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: var(--spacing-16);
+}
+
+.metadata__text--value-highlight {
+  color: var(--text-secondary);
+  font-family: Inter;
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.625rem;
+  letter-spacing: -0.01406rem;
+}
+
+.article__title {
+  font-size: 2.625rem;
+  text-wrap: balance;
+  line-height: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+.breadcrumb__divider {
+  margin: 0 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--text-muted);
+  user-select: none;
+}
+
+.breadcrumb__name {
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.8625rem;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.25rem;
+  letter-spacing: -0.015rem;
+  user-select: none;
+}
+
+.breadcrumb {
+  user-select: none;
+  margin-bottom: 2rem;
+}
+
+.breadcrumb__link {
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.8625rem;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.25rem;
+  letter-spacing: -0.015rem;
+  text-decoration: none;
+}
+
+.read-time {
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5rem;
+  letter-spacing: -0.00375rem;
+}

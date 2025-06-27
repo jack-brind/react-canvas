@@ -30,6 +30,9 @@ export function Avatars() {
   }
 
   function handleInitials(e) {
+    console.log(e);
+    console.log(e.type);
+    console.log(e.target);
     const inputValue = e.target.value;
     const initials = getInitials(inputValue);
 

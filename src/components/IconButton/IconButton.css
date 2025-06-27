@@ -1,3 +1,7 @@
+.icon-button {
+  flex-shrink: 0;
+}
+
 .icon-button__ghost {
   background: transparent;
   color: var(--text-secondary);
@@ -21,6 +25,25 @@
   color: var(--text-primary);
 }
 
+.icon-button__alpha {
+  background: transparent;
+  color: var(--text-secondary);
+  transition: background 0.2s ease;
+}
+
+.icon-button__alpha:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: var(--text-primary);
+}
+
+.muted__icon {
+  color: var(--text-subtle);
+}
+
+.muted__icon:hover {
+  color: var(--text-muted);
+}
+
 .icon-button__md {
   padding: 8px;
   border-radius: 6px;
@@ -39,4 +62,14 @@
 .icon-button__sm > * {
   height: 16px;
   width: 16px;
+}
+
+.icon-button__xs {
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.icon-button__xs > * {
+  height: 12px;
+  width: 12px;
 }

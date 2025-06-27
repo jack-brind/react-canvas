@@ -295,21 +295,22 @@
     color: #90959d;
     outline: var(--debug-outlines) dashed fuchsia;
   }
-
+  /* 
   input[type="text"]:focus::placeholder {
     color: #90959d;
     opacity: 0;
-  }
+  } */
+
   select {
     appearance: base-select;
-    color: #71717a;
+    color: var(--text-primary);
     background-color: transparent;
-    width: 180px;
+    width: 56px;
     box-sizing: border-box;
-    padding: 0.25rem 0.75rem;
-    border: 1px solid #e4e4e7;
+    padding: 0.2rem 0.75rem;
+    border: none;
+    box-shadow: var(--shadow-stroked-sm);
     border-radius: calc(0.5rem - 2px);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     cursor: pointer;
 
     & > button {
@@ -334,9 +335,9 @@
       outline-offset: -1px;
     }
 
-    &::picker-icon {
-      display: none;
-    }
+    /* &::picker-icon {
+      display: block;
+    } */
 
     &::picker(select) {
       appearance: base-select;
@@ -344,9 +345,7 @@
       padding: 0.25rem;
       margin-top: 0.25rem;
       border-radius: calc(0.5rem - 2px);
-      box-shadow:
-        0 4px 6px -1px rgba(0, 0, 0, 0.1),
-        0 2px 4px -2px rgba(0, 0, 0, 0.1);
+      box-shadow: var(--shadow-stroked-sm);
       cursor: default;
       transition:
         opacity 0.1s ease-in-out,

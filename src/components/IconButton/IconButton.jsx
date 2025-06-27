@@ -1,6 +1,13 @@
 import "./IconButton.css";
 
-function IconButton({ size = "md", type = "ghost", children, onClick }) {
+function IconButton({
+  size = "md",
+  type = "ghost",
+  children,
+  onClick,
+  className,
+  isMuted,
+}) {
   const handleClick = (event) => {
     if (onClick) {
       onClick(event);
@@ -9,7 +16,7 @@ function IconButton({ size = "md", type = "ghost", children, onClick }) {
 
   return (
     <button
-      className={`icon-button__${type} icon-button__${size}`}
+      className={`icon-button icon-button__${type} icon-button__${size} ${className || ""} ${isMuted && "muted__icon"}`}
       onClick={handleClick}
     >
       {children}

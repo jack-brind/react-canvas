@@ -48,7 +48,7 @@
     --colour-green-35: oklch(0.97 0.02 150);
     --colour-green-40: oklch(0.95 0.06 150);
     --colour-green-45: oklch(0.75 0.12 150);
-    --colour-green-50: oklch(0.68 0.13 150);
+    --colour-green-50: oklch(0.67 0.15 163);
     --colour-green-55: oklch(0.42 0.08 150);
     --colour-green-60: oklch(0.3 0.04 150);
 
@@ -64,7 +64,7 @@
     --colour-orange-35: oklch(0.97 0.03 60);
     --colour-orange-40: oklch(0.93 0.06 60);
     --colour-orange-45: oklch(0.78 0.1 60);
-    --colour-orange-50: oklch(0.75 0.11 60);
+    --colour-orange-50: oklch(0.78 0.14 63);
     --colour-orange-55: oklch(0.48 0.08 60);
     --colour-orange-60: oklch(0.35 0.04 60);
 
@@ -72,7 +72,7 @@
     --colour-yellow-35: oklch(0.97 0.04 90);
     --colour-yellow-40: oklch(0.94 0.06 90);
     --colour-yellow-45: oklch(0.88 0.11 90);
-    --colour-yellow-50: oklch(0.82 0.15 90);
+    --colour-yellow-50: oklch(0.86 0.17 88);
     --colour-yellow-55: oklch(0.68 0.12 90);
     --colour-yellow-60: oklch(0.35 0.08 90);
 
@@ -80,7 +80,7 @@
     --colour-purple-35: oklch(0.98 0.02 300);
     --colour-purple-40: oklch(0.93 0.05 300);
     --colour-purple-45: oklch(0.7 0.14 300);
-    --colour-purple-50: oklch(0.61 0.16 300);
+    --colour-purple-50: oklch(0.59 0.19 304);
     --colour-purple-55: oklch(0.4 0.13 300);
     --colour-purple-60: oklch(0.29 0.08 300);
 

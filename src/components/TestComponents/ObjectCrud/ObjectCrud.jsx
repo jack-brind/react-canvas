@@ -5,7 +5,8 @@ import pages from "../../../pages.js";
 import { X, KeyRound } from "lucide-react";
 import { RiBowlFill } from "react-icons/ri";
 import Modal from "../../Modal/Modal.jsx";
-
+import Banner from "../../Banner/Banner.jsx";
+import { TbCodeCircle2Filled } from "react-icons/tb";
 
 // ============ Housing component ============
 export default function ObjectCrud() {
@@ -31,8 +32,19 @@ export default function ObjectCrud() {
       <PageContent
         icon={<currentPageData.icon size={32} />}
         title={currentPageData.caption}
-        subtitle="This page is a practice arena for working with objects in arrays. It covers CRUD operations (Create, Read, Update, Delete) while learning React's immutable state patterns – creating new objects instead of modifying existing ones."
+        subtitle="This page is a practice arena for working with objects in arrays. It covers CRUD operations while learning React's immutable state patterns – creating new objects instead of modifying existing ones."
       />
+      <Banner
+        title="Object CRUD practice"
+        intent="custom"
+        icon={<TbCodeCircle2Filled />}
+        canDismiss
+        width="60%"
+        alignment="flex-start"
+      >
+        CRUD stands for Create, Read, Update, Delete and these lists will work
+        with object CRUD.
+      </Banner>
       <ListOne openModal={openModal} />
       <Modal
         isOpen={showModal}

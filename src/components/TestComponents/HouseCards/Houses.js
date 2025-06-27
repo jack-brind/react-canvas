@@ -1,14 +1,3 @@
-import house1 from "../../../assets/houses/house1.jpeg";
-import house2 from "../../../assets/houses/house2.jpeg";
-import house3 from "../../../assets/houses/house3.jpg";
-import house4 from "../../../assets/houses/house4.jpg";
-import house5 from "../../../assets/houses/house5.jpg";
-import house6 from "../../../assets/houses/house6.jpg";
-import house7 from "../../../assets/houses/house7.jpg";
-import house8 from "../../../assets/houses/house8.jpg";
-import house9 from "../../../assets/houses/house9.jpg";
-import house10 from "../../../assets/houses/house10.jpg";
-
 const houses = [
   {
     addressLineOne: "35 Longhorn Road",
@@ -19,7 +8,7 @@ const houses = [
     baths: 3,
     price: 1350000,
     isSold: false,
-    photo: house1,
+    photo: "/houses/house1.jpeg",
   },
   {
     addressLineOne: "21 Woodbury Lane",
@@ -30,7 +19,7 @@ const houses = [
     baths: 4,
     price: 1450000,
     isSold: false,
-    photo: house2,
+    photo: "/houses/house2.jpeg",
   },
   {
     addressLineOne: "5 The Willows",
@@ -41,7 +30,7 @@ const houses = [
     baths: 2,
     price: 1180000,
     isSold: true,
-    photo: house3,
+    photo: "/houses/house3.jpg",
   },
   {
     addressLineOne: "Flat 12 Marina Court",
@@ -52,7 +41,7 @@ const houses = [
     baths: 3,
     price: 795000,
     isSold: false,
-    photo: house4,
+    photo: "/houses/house4.jpg",
   },
   {
     addressLineOne: "42 Church Lane",
@@ -63,7 +52,7 @@ const houses = [
     baths: 2,
     price: 985000,
     isSold: false,
-    photo: house5,
+    photo: "/houses/house5.jpg",
   },
   {
     addressLineOne: "8 Victoria Gardens",
@@ -74,7 +63,7 @@ const houses = [
     baths: 2,
     price: 875000,
     isSold: true,
-    photo: house6,
+    photo: "/houses/house6.jpg",
   },
   {
     addressLineOne: "The Old Rectory",
@@ -85,7 +74,7 @@ const houses = [
     baths: 3,
     price: 825000,
     isSold: false,
-    photo: house7,
+    photo: "/houses/house7.jpg",
   },
   {
     addressLineOne: "15 Mill Road",
@@ -96,7 +85,7 @@ const houses = [
     baths: 2,
     price: 1050000,
     isSold: true,
-    photo: house8,
+    photo: "/houses/house8.jpg",
   },
   {
     addressLineOne: "Penthouse 1, Harbour View",
@@ -107,7 +96,7 @@ const houses = [
     baths: 3,
     price: 995000,
     isSold: false,
-    photo: house9,
+    photo: "/houses/house9.jpg",
   },
   {
     addressLineOne: "4 Oak Tree Close",
@@ -118,7 +107,7 @@ const houses = [
     baths: 3,
     price: 1550000,
     isSold: false,
-    photo: house10,
+    photo: "/houses/house10.jpg",
   },
 ];
 

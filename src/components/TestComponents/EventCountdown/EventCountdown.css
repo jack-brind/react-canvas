@@ -129,3 +129,15 @@
 .pill svg {
   color: #662f9d;
 }
+
+.filter__panel {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
