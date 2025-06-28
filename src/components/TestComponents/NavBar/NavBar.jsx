@@ -4,20 +4,109 @@ import pages from "../../../pages.js";
 import { useState } from "react";
 import Avatar from "../Avatar/AvatarComponent.jsx";
 import navItems from "./NavBar.js";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Smartphone, Tablet, Laptop, Monitor } from "lucide-react";
 import SocialLinks from "../SocialLinks/SocialLinks";
+import { Segment, SegmentOption } from "../../Segment/Segment";
+import { Squeeze as Hamburger } from "hamburger-react";
 
-// Segment to choose the breakpoint - to be moved into separate file at some point
-function Segments() {
+// React canvas container
+export default function NavigationBar() {
+  const currentPageData = pages.find((page) => page.link === "navBar");
+  const [selectedOption, setSelectedOption] = useState("full");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Test breakpoint harness widths
+  const breakpointContainer = {
+    width: `${selectedOption === "full" ? "100%" : "400px"}`,
+  };
+
+  const handleBreakpointChange = (option) => {
+    setSelectedOption(option);
+    if (option === "full") {
+      setIsMenuOpen(false);
+    }
+  };
+
   return (
     <>
-      <h3>Container size</h3>
-      <div className="segment">
-        <button className="segment-control__option segment-control__option--active">
-          Desktop / tablet
-        </button>
-        <button className="segment-control__option">Smartphone</button>
-        <button className="segment-control__option">Manual</button>
+      <PageContent
+        className="nav-page"
+        icon={<currentPageData.icon size={32} />}
+        title={currentPageData.caption}
+        subtitle="This component forms the basis of the new NavBar component in my new React / Next.js based portfolio site in the future. This will have options to change the breakpoint sizes and have fully responsive behaviour on mobile."
+      />
+      <h3>Breakpoints</h3>
+      <div className="breakpoint-sizes">
+        <Segment>
+          <SegmentOption
+            icon={<Monitor size={12} />}
+            text="Desktop"
+            active={selectedOption === "full"}
+            onClick={() => handleBreakpointChange("full")}
+          />
+          <SegmentOption
+            icon={<Smartphone size={12} />}
+            text="Mobile"
+            active={selectedOption === "mobile"}
+            onClick={() => handleBreakpointChange("mobile")}
+          />
+        </Segment>
+      </div>
+
+      <div style={breakpointContainer}>
+        <div className="navbar-container">
+          <Navigation isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+        </div>
+      </div>
+      <div style={breakpointContainer}>
+        <div className="footer-container">
+          <Footer />
+        </div>
+      </div>
+    </>
+  );
+}
+
+// Entire navigation component
+function Navigation({ isMenuOpen, setIsMenuOpen }) {
+  function handleMenuToggle() {
+    setIsMenuOpen(!isMenuOpen);
+  }
+
+  return (
+    <>
+      <img
+        src="/cities/tokyo.jpg"
+        style={{
+          height: "180px",
+          width: "400px",
+          margin: "0px",
+          position: "absolute",
+          display: "none",
+        }}
+      />
+      <div className="nav__container">
+        <div className="navigation">
+          <Home />
+          <div className="navigation__links--container">
+            <Links />
+            <button className="navigation__toggle" onClick={handleMenuToggle}>
+              <Hamburger
+                toggled={isMenuOpen}
+                toggle={setIsMenuOpen}
+                size={16}
+                duration={0.15}
+                color="var(--text-muted)"
+                rounded
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        className={`navigation__links--container-mobile ${isMenuOpen ? "open" : ""}`}
+      >
+        <Links />
       </div>
     </>
   );
@@ -25,13 +114,13 @@ function Segments() {
 
 // Avatar, name and job title
 function Home() {
-  const handleClick = (e) => {
-    e.preventDefault();
+  const handleGoToHome = (e) => {
     alert("Home button clicked");
+    e.preventDefault();
   };
 
   return (
-    <a href="#" onClick={handleClick} className="navigation__home">
+    <a href="/" onClick={handleGoToHome} className="navigation__home">
       <Avatar size="sm" photo="/headshot.png" intent="photo" />
       <span className="nav__name">Jack Brind</span>
       <span className="nav__title">Senior Product Designer</span>
@@ -52,66 +141,30 @@ function Links() {
 
 // Link component
 function Link({ label, link }) {
-  const handleClick = (e) => {
+  const handleLinkClick = (e) => {
     e.preventDefault();
     alert(`${link} clicked`);
   };
   return (
     <li>
-      <a className="navigation__links" href="#" onClick={handleClick}>
+      <a className="navigation__links" href="#" onClick={handleLinkClick}>
         {label}
       </a>
     </li>
   );
 }
 
-// Entire navigation component
-function Navigation() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  function handleMenuToggle() {
-    setIsMenuOpen(!isMenuOpen);
-  }
-
+function Footer() {
   return (
-    <div className="nav__container">
-      <div className="navigation">
-        <Home />
-        <div className="navigation__links-container">
-          <Links />
-          <button className="navigation__toggle" onClick={handleMenuToggle}>
-            {isMenuOpen ? <X /> : <Menu />}
-          </button>
-        </div>
-      </div>
-      {/* <div className="navigation__mobile">
-        <Links />
-      </div> */}
+    <div className="footer">
+      <Copyright />
+      <SocialLinks />
     </div>
   );
 }
 
-// React canvas container
-function NavigationBar() {
-  const currentPageData = pages.find((page) => page.link === "navBar");
+function Copyright() {
+  const currentYear = new Date().getFullYear();
 
-  return (
-    <>
-      <PageContent
-        className="nav-page"
-        icon={<currentPageData.icon size={32} />}
-        title={currentPageData.caption}
-        subtitle="This component forms the basis of the new NavBar component in my new React / Next.js based portfolio site in the future. This will have options to change the breakpoint sizes and have fully responsive behaviour on mobile. ⚠️ Absolutely stumped by container queries on this one. I'll come back to it."
-      />
-      <Segments />
-      <div className="breakpoint-harness">
-        <div className="navbar-container">
-          <Navigation />
-          <SocialLinks />
-        </div>
-      </div>
-    </>
-  );
+  return <p className="copyright">&copy; Jack Brind {currentYear}</p>;
 }
-
-export default NavigationBar;

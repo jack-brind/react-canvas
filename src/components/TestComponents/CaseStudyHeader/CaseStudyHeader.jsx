@@ -4,6 +4,7 @@ import PageContent from "../../PageContent/PageContent.jsx";
 import pages from "../../../pages.js";
 import { Segment, SegmentOption } from "../../Segment/Segment.jsx";
 import { X } from "lucide-react";
+import { Icon } from "lucide-react";
 import Tldr from "../../../assets/icons/Tldr";
 import DeepDive from "../../../assets/icons/DeepDive";
 import { useState } from "react";
