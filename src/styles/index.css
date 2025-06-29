@@ -267,11 +267,12 @@
   }
 
   input[type="text"],
+  input[type="number"],
   textarea {
     border: none;
     background: transparent;
     margin: 0;
-    outline: 1px solid var(--border-default);
+    outline: 0px solid var(--border-default);
     border-radius: 6px;
     padding: 0.375rem 0.5rem 0.438rem 0.5rem;
     height: 2rem;
@@ -280,18 +281,22 @@
     font-size: 13px;
     font-weight: 450;
     letter-spacing: -0.00406rem;
-    box-shadow: 0px 1px 3px 0.25px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-stroked-sm);
     position: relative;
   }
 
   input[type="text"]:hover,
   input[type="text"]:active,
-  input[type="text"]:focus {
+  input[type="text"]:focus,
+  input[type="number"]:hover,
+  input[type="number"]:active,
+  input[type="number"]:focus {
     outline: 1px solid #c8cbd0;
     box-shadow: 0px 1px 3px 0.25px rgba(0, 0, 0, 0.08);
   }
 
-  input[type="text"]::placeholder {
+  input[type="text"]::placeholder,
+  input[type="number"]::placeholder {
     color: #90959d;
     outline: var(--debug-outlines) dashed fuchsia;
   }
@@ -327,17 +332,15 @@
     }
 
     &:has(option:not([hidden]):checked) {
-      color: #18181b;
+      color: var(--text-primary);
+      font-size: var(--font-size-5);
+      font-weight: var(--font-weight-regular);
     }
 
     &:focus-visible {
       outline: 2px solid #a1a1aa;
       outline-offset: -1px;
     }
-
-    /* &::picker-icon {
-      display: block;
-    } */
 
     &::picker(select) {
       appearance: base-select;

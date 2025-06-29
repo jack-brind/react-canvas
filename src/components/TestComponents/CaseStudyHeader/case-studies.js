@@ -37,7 +37,7 @@ export const caseStudy = [
     deepDive: 9,
   },
   {
-    title: "Implementing compliance overrides",
+    title: "Introducing a robust, auditable compliance override system",
     metadata: [
       {
         name: "Key impact",
@@ -68,7 +68,7 @@ export const caseStudy = [
     deepDive: 9,
   },
   {
-    title: "itris Knowledgebase",
+    title: "Moving learning online for thousands of customers",
     metadata: [
       {
         name: "Key impact",

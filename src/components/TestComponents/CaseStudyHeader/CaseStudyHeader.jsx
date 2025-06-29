@@ -3,7 +3,7 @@ import { caseStudy } from "./case-studies";
 import PageContent from "../../PageContent/PageContent.jsx";
 import pages from "../../../pages.js";
 import { Segment, SegmentOption } from "../../Segment/Segment.jsx";
-import { X } from "lucide-react";
+import { Menu, X, Coins, RectangleEllipsis, LibraryBig } from "lucide-react";
 import { Icon } from "lucide-react";
 import Tldr from "../../../assets/icons/Tldr";
 import DeepDive from "../../../assets/icons/DeepDive";
@@ -11,6 +11,11 @@ import { useState } from "react";
 
 export default function CaseStudyHeaderComponent() {
   const currentPageData = pages.find((page) => page.link === "caseStudyHeader");
+  const [selectedOption, setSelectedOption] = useState(0);
+
+  const handleCaseStudySelection = (selectedOption) => {
+    setSelectedOption(selectedOption);
+  };
 
   return (
     <>
@@ -19,7 +24,30 @@ export default function CaseStudyHeaderComponent() {
         title={currentPageData.caption}
         subtitle="The header / frontmatter for case studies on my portfolio including a segment component to switch between the short and long version of the case study."
       />
-      <CaseStudyHeader caseStudy={caseStudy[0]} />
+      <h3>Case study</h3>
+      <div className="case-study__selection">
+        <Segment>
+          <SegmentOption
+            icon={<Coins size={12} />}
+            text="Global rates"
+            active={selectedOption === 0}
+            onClick={() => handleCaseStudySelection(0)}
+          />
+          <SegmentOption
+            icon={<RectangleEllipsis size={12} />}
+            text="Compliance overrides"
+            active={selectedOption === 1}
+            onClick={() => handleCaseStudySelection(1)}
+          />
+          <SegmentOption
+            icon={<LibraryBig size={12} />}
+            text="Knowledgebase"
+            active={selectedOption === 2}
+            onClick={() => handleCaseStudySelection(2)}
+          />
+        </Segment>
+      </div>
+      <CaseStudyHeader caseStudy={caseStudy[selectedOption]} />
     </>
   );
 }

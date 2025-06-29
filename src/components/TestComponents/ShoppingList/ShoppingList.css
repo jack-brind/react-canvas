@@ -13,6 +13,24 @@ shopping-list {
   background-color: var(--bg-secondary);
 }
 
+.shopping-list__input {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-top: 24px;
+  align-items: center;
+}
+
+.shopping-list__category-input {
+  width: 220px;
+  height: 32px;
+}
+
+.shopping-list__quantity-input {
+  width: 60px;
+  height: 32px;
+}
+
 .shopping-list__item--name {
   display: flex;
   flex-direction: row;
@@ -27,9 +45,17 @@ shopping-list {
 
 .packed {
   text-decoration: line-through;
-  color: var(--text-secondary);
+  color: var(--text-subtle);
 }
 
 li {
   cursor: pointer;
 }
+
+.unchecked svg {
+  color: var(--text-subtle);
+}
+
+/* .unchecked:hover svg {
+  color: var(--text-muted);
+} */

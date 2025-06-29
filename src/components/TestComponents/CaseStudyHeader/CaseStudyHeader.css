@@ -57,6 +57,10 @@
   margin-bottom: var(--spacing-16);
 }
 
+.case-study__selection {
+  margin: 12px 0 80px 0;
+}
+
 .metadata__text--value-highlight {
   color: var(--text-secondary);
   font-family: Inter;

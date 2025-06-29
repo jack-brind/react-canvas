@@ -124,6 +124,7 @@ function CheckoutComponent() {
       <DiscountCodes
         codes={discountCodes}
         onDiscountApply={handleDiscountApply}
+        basketQuantity={basketQuantity}
       />
 
       {/* Monetary summary of basket */}
@@ -140,7 +141,7 @@ function CheckoutComponent() {
       <BasketTotal total={total} vat={vatAmount} />
 
       {/* Button to pay for the basket */}
-      <Pay total={total} />
+      <Pay total={total} basketQuantity={basketQuantity} />
     </div>
   );
 }
@@ -227,7 +228,7 @@ function BasketItem({ item, onQuantityChange, onDeleteItem }) {
 }
 
 // Discount code entry component
-function DiscountCodes({ codes, onDiscountApply }) {
+function DiscountCodes({ codes, onDiscountApply, basketQuantity }) {
   const [discountCode, setDiscountCode] = useState("");
   const [appliedDiscount, setAppliedDiscount] = useState(null);
   const [hasAttempted, setHasAttempted] = useState(false);
@@ -241,6 +242,7 @@ function DiscountCodes({ codes, onDiscountApply }) {
   function handleApplyCode() {
     setHasAttempted(true);
     const foundCode = codes.find((item) => item.code === discountCode);
+    setDiscountCode("");
 
     if (foundCode) {
       setAppliedDiscount(foundCode);
@@ -252,35 +254,37 @@ function DiscountCodes({ codes, onDiscountApply }) {
   }
 
   return (
-    <div>
-      <div className="discount-section">
-        <input
-          type="text"
-          placeholder="Enter discount code"
-          onChange={handleCodeInput}
-          value={discountCode}
-        />
-        <button className="apply-button" onClick={handleApplyCode}>
-          Apply
-        </button>
+    basketQuantity > 1 && (
+      <div>
+        <div className="discount-section">
+          <input
+            type="text"
+            placeholder="Enter discount code"
+            onChange={handleCodeInput}
+            value={discountCode}
+          />
+          <button className="apply-button" onClick={handleApplyCode}>
+            Apply
+          </button>
 
-        {hasAttempted && (
-          <span>
-            {appliedDiscount ? (
-              <div className="code-check valid-code">
-                <Check />
-                <p>{`${appliedDiscount.discount}% discount applied!`}</p>
-              </div>
-            ) : (
-              <div className="code-check invalid-code">
-                <X />
-                <p>Invalid code</p>
-              </div>
-            )}
-          </span>
-        )}
+          {hasAttempted && (
+            <span>
+              {appliedDiscount ? (
+                <div className="code-check valid-code">
+                  <Check />
+                  <p>{`${appliedDiscount.discount}% discount applied!`}</p>
+                </div>
+              ) : (
+                <div className="code-check invalid-code">
+                  <X />
+                  <p>Invalid code</p>
+                </div>
+              )}
+            </span>
+          )}
+        </div>
       </div>
-    </div>
+    )
   );
 }
 
@@ -318,9 +322,10 @@ function BasketTotal({ total, vat }) {
 }
 
 // Basket pay component
-function Pay({ total }) {
+function Pay({ total, basketQuantity }) {
   return (
     <button
+      disabled={basketQuantity === 0}
       className="apply-button pay"
       onClick={() =>
         alert(`✓ Payment successful – ${currencyDisplay(total)} paid!`)
