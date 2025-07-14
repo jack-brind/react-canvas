@@ -63,7 +63,10 @@
     --text-subtle: var(--colour-neutral-400);
     --text-selection: var(--colour-neutral-100);
     --colour-brand: var(--colour-blue-50);
+    --colour-pandadoc: #248567;
+    --text-on-bold: var(--colour-white);
     --text-selection-background: oklch(from var(--colour-blue-50) l c h / 25%);
+    --colour-destructive: var(--colour-red-50);
 
     /* Custom backgrounds */
     --background-blue-bold: var(--colour-blue-50);
@@ -225,14 +228,14 @@
 
 @layer components {
   .lucide {
-    color: var(--text-primary);
+    color: currentColor;
     width: var(--size-4);
     height: var(--size-4);
     stroke-width: var(--thickness-thicker);
   }
 
   .tabler-icon {
-    color: var(--text-primary);
+    color: currentColor;
     width: 1.125rem; /* 18px */
     height: 1.125rem; /* 18px */
     stroke-width: 1.75;

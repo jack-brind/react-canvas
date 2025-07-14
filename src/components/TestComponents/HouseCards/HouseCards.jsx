@@ -2,8 +2,27 @@ import "./HouseCards.css";
 import { useState } from "react";
 import PageContent from "../../PageContent/PageContent";
 import pages from "../../../pages.js";
-import { BedDouble, Bath, ChevronRight, ChevronLeft } from "lucide-react";
+import {
+  BedDouble,
+  Bath,
+  Airplay,
+  ChevronRight,
+  ChartPie,
+  ChevronLeft,
+  ChevronDown,
+  Check,
+  Save,
+  Plus,
+  ArrowRight,
+  ArrowUpRight,
+  Trash2,
+  Link,
+  QrCode,
+} from "lucide-react";
 import houses from "./Houses.js";
+import IconButton from "../../IconButton/IconButton.jsx";
+import Button from "../../Button/Button.jsx";
+import Rating from "../../Rating/Rating";
 
 function House({
   addressLineOne,
@@ -60,26 +79,99 @@ function Houses() {
 
   return (
     <>
+      <Rating icon="heart" />
+
       <House {...house} />
 
       <div className="nav__buttons">
         <span className="count">{`${currentHouse + 1} of ${houses.length}`}</span>
-        <button
-          data-gradient
+        <IconButton
           onClick={() => setCurrentHouse(currentHouse - 1)}
           disabled={currentHouse === 0}
-          className="button__default"
-        >
-          {<ChevronLeft />}
-        </button>
-        <button
-          data-gradient
+          type="default"
+          size="sm"
+          icon={<ChevronLeft />}
+        />
+        <IconButton
           onClick={() => setCurrentHouse(currentHouse + 1)}
           disabled={currentHouse === houses.length - 1}
-          className="button__default"
-        >
-          {<ChevronRight />}
-        </button>
+          type="default"
+          size="sm"
+          icon={<ChevronRight />}
+        />
+      </div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "12px",
+          marginTop: "56px",
+        }}
+      >
+        <Button leadingIcon={<Airplay />} label="Airplay" size="sm" />
+        <Button trailingIcon={<ChevronDown />} label="Environment" />
+        <Button
+          leadingIcon={<ChartPie />}
+          trailingIcon={<ChevronDown />}
+          label="Chart type"
+        />
+        <Button label="Open link" />
+      </div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "12px",
+          marginTop: "32px",
+        }}
+      >
+        <Button type="primary" leadingIcon={<Check />} label="Submit" />
+        <Button
+          type="primary"
+          size="sm"
+          trailingIcon={<ArrowRight />}
+          label="Open library"
+        />
+        <Button
+          type="primary"
+          leadingIcon={<Save />}
+          trailingIcon={<ChevronDown />}
+          label="Save changes"
+        />
+        <Button type="primary" label="Complete" />
+      </div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "12px",
+          marginTop: "32px",
+        }}
+      >
+        <Button type="ghost" leadingIcon={<Plus />} label="New project" />
+        <Button
+          type="ghost"
+          trailingIcon={<ArrowRight />}
+          label="Go to favourites"
+        />
+        <Button
+          type="ghost"
+          leadingIcon={<QrCode />}
+          trailingIcon={<ChevronDown />}
+          label="Authenticate"
+        />
+        <Button type="ghost" label="Cancel" />
+      </div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "12px",
+          marginTop: "32px",
+        }}
+      >
+        <Button type="destructive" leadingIcon={<Trash2 />} label="Delete" />
+        <Button type="destructive" label="Discard" />
       </div>
     </>
   );

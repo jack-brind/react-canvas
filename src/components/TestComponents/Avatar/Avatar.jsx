@@ -3,11 +3,21 @@ import pages from "../../../pages.js";
 import Avatar from "./AvatarComponent.jsx";
 import { useState } from "react";
 import generateRandomFace from "../../../helpers/generateRandomFace.js";
+import IconButton from "../../IconButton/IconButton.jsx";
+import { RefreshCcw } from "lucide-react";
 
 export function Avatars() {
   const currentPageData = pages.find((page) => page.link === "avatar");
-  const [initials, setInitials] = useState("AB");
+  const [initials, setInitials] = useState("AA");
   const [value, setValue] = useState("");
+  const [photos, setPhotos] = useState(() => [
+    generateRandomFace(),
+    generateRandomFace(),
+    generateRandomFace(),
+    generateRandomFace(),
+    generateRandomFace(),
+    generateRandomFace(),
+  ]);
 
   function getInitials(fullName) {
     if (!fullName.trim()) return "AB";
@@ -38,6 +48,18 @@ export function Avatars() {
 
     setInitials(initials);
     setValue(inputValue);
+  }
+
+  function generateNewPhotos() {
+    const newPhotos = [
+      generateRandomFace(),
+      generateRandomFace(),
+      generateRandomFace(),
+      generateRandomFace(),
+      generateRandomFace(),
+      generateRandomFace(),
+    ];
+    setPhotos(newPhotos);
   }
 
   return (
@@ -123,14 +145,21 @@ export function Avatars() {
         <Avatar size="xl" intent="fallback" />
         <Avatar size="2xl" intent="fallback" />
       </div>
-      <div style={{ display: "flex", gap: "16px", margin: "0 0 40px 0" }}>
-        <Avatar intent="photo" size="2xl" photo={generateRandomFace()} />
-        <Avatar intent="photo" size="2xl" photo={generateRandomFace()} />
-        <Avatar intent="photo" size="2xl" photo={generateRandomFace()} />
-        <Avatar intent="photo" size="2xl" photo={generateRandomFace()} />
-        <Avatar intent="photo" size="2xl" photo={generateRandomFace()} />
-        <Avatar intent="photo" size="2xl" photo={generateRandomFace()} />
-        <Avatar intent="photo" size="2xl" photo={generateRandomFace()} />
+      <div
+        style={{
+          display: "flex",
+          gap: "16px",
+          margin: "0 0 40px 0",
+          alignItems: "center",
+        }}
+      >
+        <Avatar intent="photo" size="2xl" photo={photos[0]} />
+        <Avatar intent="photo" size="2xl" photo={photos[1]} />
+        <Avatar intent="photo" size="2xl" photo={photos[2]} />
+        <Avatar intent="photo" size="2xl" photo={photos[3]} />
+        <Avatar intent="photo" size="2xl" photo={photos[4]} />
+        <Avatar intent="photo" size="2xl" photo={photos[5]} />
+        <IconButton icon={<RefreshCcw />} onClick={generateNewPhotos} />
       </div>
       <input
         type="text"

@@ -58,9 +58,13 @@ export default function Banner({
             <div className="banner__content">{children}</div>
           </div>
           {canDismiss && (
-            <IconButton type="alpha" size="sm" className="dismiss">
-              <X onClick={handleDismiss} />
-            </IconButton>
+            <IconButton
+              icon={<X />}
+              type="alpha"
+              size="sm"
+              className="dismiss"
+              onClick={handleDismiss}
+            />
           )}
         </div>
       )}

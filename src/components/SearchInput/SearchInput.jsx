@@ -45,9 +45,8 @@ function SearchInput({
           size="xs"
           isMuted
           className="clear-icon"
-        >
-          <Cross className="clear-icon-svg" onClick={handleClearTerm} />
-        </IconButton>
+          icon={<Cross className="clear-icon-svg" onClick={handleClearTerm} />}
+        />
       )}
     </div>
   );

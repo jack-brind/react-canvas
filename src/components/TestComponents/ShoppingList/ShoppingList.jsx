@@ -159,9 +159,7 @@ function ShoppingItem({ item, onPacked, onDelete }) {
 
       {/* Item category */}
       {item.category}
-      <IconButton onClick={onDelete}>
-        <X />
-      </IconButton>
+      <IconButton icon={<X />} onClick={onDelete} />
     </li>
   );
 }

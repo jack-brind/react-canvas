@@ -1,0 +1,149 @@
+/* Common button characteristics */
+.Button {
+  flex-shrink: 0;
+  height: fit-content;
+  width: fit-content;
+  transition: background 0.2s ease;
+}
+
+.Button:hover {
+  cursor: pointer;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.Button__content {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+}
+
+/* Button types */
+.Button__primary {
+  background: var(--colour-brand);
+  color: var(--text-on-bold);
+}
+
+.Button__primary:hover {
+  filter: brightness(0.9);
+}
+
+.Button__ghost {
+  background: transparent;
+  color: var(--text-secondary);
+}
+
+.Button__ghost:hover {
+  background: var(--background-component-hover);
+  color: var(--text-primary);
+}
+
+.Button__default {
+  background: var(--background-component-default);
+  color: var(--text-secondary);
+  box-shadow: var(--shadow-stroked-sm);
+}
+
+.Button__default:hover {
+  background: var(--background-component-hover);
+  color: var(--text-primary);
+}
+
+.Button__alpha {
+  background: transparent;
+  color: var(--text-secondary);
+}
+
+.Button__alpha:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: var(--text-primary);
+}
+
+.Button__destructive {
+  background: var(--colour-destructive);
+  color: var(--text-on-bold);
+}
+
+.Button__destructive:hover {
+  filter: brightness(0.9);
+}
+
+/* Icon sizes */
+.Button__leading-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Button__leading-icon--md {
+  width: var(--size-4);
+  height: var(--size-4);
+}
+
+.Button__trailing-icon {
+  display: flex;
+  width: var(--size-3);
+  height: var(--size-3);
+  justify-content: center;
+  align-items: center;
+  margin-top: 2px; /* Align with text */
+}
+
+.Button__leading-icon--sm {
+  width: var(--size-3);
+  height: var(--size-3);
+}
+
+.Button__trailing-icon--default {
+  color: var(--text-subtle);
+}
+
+.Button__trailing-icon--primary {
+  color: var(--text-on-bold);
+}
+
+/* Button sizes */
+.Button__lg {
+  padding: var(--spacing-4) var(--spacing-8);
+  border-radius: var(--radius-md);
+}
+
+.Button__label--lg {
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.625rem;
+  letter-spacing: -0.01406rem;
+}
+
+.Button__md {
+  padding: var(--spacing-2) var(--spacing-5);
+  border-radius: var(--radius-sm);
+}
+
+.Button__label--md {
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25rem;
+  letter-spacing: -0.00406rem;
+}
+
+.Button__sm {
+  padding: var(--spacing-1) var(--spacing-4);
+  border-radius: var(--radius-sm);
+}
+
+.Button__label--sm {
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25rem;
+  letter-spacing: -0.00406rem;
+}

@@ -7,7 +7,7 @@ function SocialLinks() {
     <div className="social-links__container">
       {links.map((link) => (
         <a href={link.url} target="_blank" key={link.name}>
-          <IconButton>{<img src={link.logo} alt={link.name} />}</IconButton>
+          <IconButton icon={<link.IconComponent />} alt={link.name} />
         </a>
       ))}
     </div>

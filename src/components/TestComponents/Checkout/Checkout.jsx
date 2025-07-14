@@ -130,7 +130,6 @@ function CheckoutComponent() {
       {/* Monetary summary of basket */}
       <BasketSummary
         subtotal={subtotal}
-        shipping={shippingCost}
         shippingCost={shippingCost}
         discountAmount={discountAmount}
         discount={appliedDiscount}
@@ -219,9 +218,12 @@ function BasketItem({ item, onQuantityChange, onDeleteItem }) {
       </div>
 
       <div>
-        <IconButton size="sm" type="ghost" onClick={handleDelete}>
-          <RiDeleteBin5Fill fill="var(--text-subtle)" />
-        </IconButton>
+        <IconButton
+          size="sm"
+          type="ghost"
+          icon={<RiDeleteBin5Fill fill="var(--text-subtle)" />}
+          onClick={handleDelete}
+        />
       </div>
     </>
   );

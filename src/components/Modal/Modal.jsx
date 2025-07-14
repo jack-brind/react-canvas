@@ -39,9 +39,7 @@ function Modal({
               {subtitle && <div className="modal__subtitle">{subtitle}</div>}
             </div>
           </div>
-          <IconButton onClick={onClose}>
-            <X />
-          </IconButton>
+          <IconButton icon={<X />} onClick={onClose} />
         </div>
         <div className="modal__content">{children}</div>
         <div className="modal__buttons">

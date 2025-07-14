@@ -9,6 +9,7 @@ import {
   ListPlus,
   Shapes,
   FileText,
+  Coins,
 } from "lucide-react";
 
 import { TbShoppingCart, TbChecklist } from "react-icons/tb";
@@ -68,6 +69,11 @@ const pages = [
     link: "caseStudyHeader",
     caption: "Case Study Header",
     icon: FileText,
+  },
+  {
+    link: "pricing",
+    caption: "Pricing Cards",
+    icon: Coins,
   },
 ];
 

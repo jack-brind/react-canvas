@@ -10,6 +10,7 @@ import Accordion from "../TestComponents/Accordion/Accordion";
 import Checkout from "../TestComponents/Checkout/Checkout";
 import ObjectCrud from "../TestComponents/ObjectCrud/ObjectCrud";
 import CaseStudyHeaderComponent from "../TestComponents/CaseStudyHeader/CaseStudyHeader";
+import PricingComponent from "../TestComponents/Pricing/Pricing";
 
 function ContentArea({ currentPage }) {
   const pageComponents = {
@@ -24,6 +25,7 @@ function ContentArea({ currentPage }) {
     checkout: <Checkout />,
     objectCrud: <ObjectCrud />,
     caseStudyHeader: <CaseStudyHeaderComponent />,
+    pricing: <PricingComponent />,
   };
   return (
     <div className="floating__content">

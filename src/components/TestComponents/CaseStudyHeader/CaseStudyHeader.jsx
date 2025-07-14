@@ -11,10 +11,10 @@ import { useState } from "react";
 
 export default function CaseStudyHeaderComponent() {
   const currentPageData = pages.find((page) => page.link === "caseStudyHeader");
-  const [selectedOption, setSelectedOption] = useState(0);
+  const [selectedStudy, setSelectedStudy] = useState(0);
 
-  const handleCaseStudySelection = (selectedOption) => {
-    setSelectedOption(selectedOption);
+  const handleCaseStudySelection = (selectedStudy) => {
+    setSelectedStudy(selectedStudy);
   };
 
   return (
@@ -30,24 +30,24 @@ export default function CaseStudyHeaderComponent() {
           <SegmentOption
             icon={<Coins size={12} />}
             text="Global rates"
-            active={selectedOption === 0}
+            active={selectedStudy === 0}
             onClick={() => handleCaseStudySelection(0)}
           />
           <SegmentOption
             icon={<RectangleEllipsis size={12} />}
             text="Compliance overrides"
-            active={selectedOption === 1}
+            active={selectedStudy === 1}
             onClick={() => handleCaseStudySelection(1)}
           />
           <SegmentOption
             icon={<LibraryBig size={12} />}
             text="Knowledgebase"
-            active={selectedOption === 2}
+            active={selectedStudy === 2}
             onClick={() => handleCaseStudySelection(2)}
           />
         </Segment>
       </div>
-      <CaseStudyHeader caseStudy={caseStudy[selectedOption]} />
+      <CaseStudyHeader caseStudy={caseStudy[selectedStudy]} />
     </>
   );
 }

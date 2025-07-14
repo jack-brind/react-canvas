@@ -1,0 +1,151 @@
+.pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.pricing-card__container {
+  display: flex;
+  gap: 1rem;
+}
+
+.pricing-card {
+  position: relative;
+  padding: 16px 16px 24px;
+  box-shadow: var(--shadow-stroked-md);
+  border-radius: var(--radius-md);
+  background: white;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1rem;
+}
+
+.pricing__price {
+  margin: 0;
+  font-size: var(--font-size-8);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.feature-item span {
+  margin: 0;
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary);
+}
+
+.feature-item svg {
+  flex-shrink: 0;
+  color: var(--colour-pandadoc);
+  margin-top: 5px;
+  stroke-width: 2.5px;
+}
+
+.price__option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.popular {
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border: 2px solid var(--colour-pandadoc);
+}
+
+.pricing__description {
+  margin: 0;
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-muted);
+}
+
+.popular:before {
+  display: block;
+  position: absolute;
+  top: -30px;
+  left: -2px;
+  content: "Most Popular";
+  width: calc(100% + 4px);
+  padding: 6px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--colour-pandadoc);
+}
+
+.primaryButton {
+  background-color: var(--colour-pandadoc);
+}
+
+.pricing__details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pricing__header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pricing__button {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.separator {
+  margin: 12px 0;
+}
+
+.features__header {
+  font-weight: var(--font-weight-medium);
+}
+
+.plan__segment {
+  max-width: fit-content;
+}
+
+.annual-billing {
+  display: flex;
+  align-items: center;
+  height: 32px;
+}
+
+.annual-billing p {
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-muted);
+  line-height: 2.8;
+}
+
+.features__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
