@@ -2,6 +2,7 @@ import { createPortal } from "react-dom";
 import "./Modal.css";
 import { X } from "lucide-react";
 import IconButton from "../IconButton/IconButton.jsx";
+import Button from "../Button/Button";
 
 function Modal({
   isOpen,
@@ -43,18 +44,8 @@ function Modal({
         </div>
         <div className="modal__content">{children}</div>
         <div className="modal__buttons">
-          <button
-            className="modal__button modal__button--cancel"
-            onClick={onClose}
-          >
-            {cancelText}
-          </button>
-          <button
-            className="modal__button modal__button--confirm"
-            onClick={onConfirm}
-          >
-            {confirmText}
-          </button>
+          <Button label={cancelText} type="ghost" onClick={onClose} />
+          <Button label={confirmText} type="primary" onClick={onConfirm} />
         </div>
       </div>
     </div>,

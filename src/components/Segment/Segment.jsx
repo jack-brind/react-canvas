@@ -11,7 +11,7 @@ export function SegmentOption({ icon, text, active, onClick }) {
       onClick={onClick}
       role="button"
     >
-      <div className="segment__icon">{icon}</div>
+      {icon && <div className="segment__icon">{icon}</div>}
       <span className="segment__text">{text}</span>
     </div>
   );

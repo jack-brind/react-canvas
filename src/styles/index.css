@@ -191,7 +191,7 @@
   }
 
   body {
-    --body-width: 49.5rem;
+    --body-width: 62rem;
   }
 
   h1 {
@@ -231,14 +231,14 @@
     color: currentColor;
     width: var(--size-4);
     height: var(--size-4);
-    stroke-width: var(--thickness-thicker);
+    strokewidth: var(--thickness-thicker);
   }
 
   .tabler-icon {
     color: currentColor;
     width: 1.125rem; /* 18px */
     height: 1.125rem; /* 18px */
-    stroke-width: 1.75;
+    strokewidth: 1.75;
   }
 
   .button__default {
@@ -383,7 +383,7 @@
         margin-left: auto;
         opacity: 0;
         background: center / contain no-repeat
-          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2318181b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'%3E%3C/path%3E%3C/svg%3E");
+          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2318181b' strokeWidth='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'%3E%3C/path%3E%3C/svg%3E");
       }
 
       &::checkmark {

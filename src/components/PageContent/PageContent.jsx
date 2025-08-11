@@ -6,10 +6,12 @@ function PageContent({ title, icon, subtitle, children }) {
       <div className="page__header">
         <div className="page__header--header">
           {icon}
-          <h1>{title}</h1>
+          <h1 className='page__title'>{title}</h1>
         </div>
         <div className="page__header--subtitle">
-          <p>{subtitle}</p>
+          <p style={{ width: "720px", color: "var(--text-secondary)" }}>
+            {subtitle}
+          </p>
           <hr />
         </div>
       </div>

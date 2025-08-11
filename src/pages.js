@@ -10,6 +10,8 @@ import {
   Shapes,
   FileText,
   Coins,
+  MessagesSquare,
+  CloudSun,
 } from "lucide-react";
 
 import { TbShoppingCart, TbChecklist } from "react-icons/tb";
@@ -61,9 +63,9 @@ const pages = [
     icon: TbChecklist,
   },
   {
-    link: "objectCrud",
-    caption: "Object CRUD",
-    icon: Shapes,
+    link: "weather",
+    caption: "Weather",
+    icon: CloudSun,
   },
   {
     link: "caseStudyHeader",
@@ -74,6 +76,11 @@ const pages = [
     link: "pricing",
     caption: "Pricing Cards",
     icon: Coins,
+  },
+  {
+    link: "userFeedback",
+    caption: "User Feedback",
+    icon: MessagesSquare,
   },
 ];
 

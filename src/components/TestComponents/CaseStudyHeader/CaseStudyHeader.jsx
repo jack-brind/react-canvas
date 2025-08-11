@@ -3,15 +3,31 @@ import { caseStudy } from "./case-studies";
 import PageContent from "../../PageContent/PageContent.jsx";
 import pages from "../../../pages.js";
 import { Segment, SegmentOption } from "../../Segment/Segment.jsx";
-import { Menu, X, Coins, RectangleEllipsis, LibraryBig } from "lucide-react";
+import {
+  Menu,
+  X,
+  Coins,
+  RectangleEllipsis,
+  LibraryBig,
+  CircleCheckBig,
+} from "lucide-react";
 import { Icon } from "lucide-react";
 import Tldr from "../../../assets/icons/Tldr";
 import DeepDive from "../../../assets/icons/DeepDive";
 import { useState } from "react";
+import Breadcrumb from "../../Breadcrumb/Breadcrumb";
 
 export default function CaseStudyHeaderComponent() {
   const currentPageData = pages.find((page) => page.link === "caseStudyHeader");
   const [selectedStudy, setSelectedStudy] = useState(0);
+
+  const breadcrumbItems = [
+    { label: "Work", path: "/work" },
+    {
+      label: caseStudy[selectedStudy].title,
+      path: caseStudy[selectedStudy].path || "#",
+    },
+  ];
 
   const handleCaseStudySelection = (selectedStudy) => {
     setSelectedStudy(selectedStudy);
@@ -45,19 +61,28 @@ export default function CaseStudyHeaderComponent() {
             active={selectedStudy === 2}
             onClick={() => handleCaseStudySelection(2)}
           />
+          {/* <SegmentOption
+            icon={<CircleCheckBig size={12} />}
+            text="Approvals"
+            active={selectedStudy === 3}
+            onClick={() => handleCaseStudySelection(3)}
+          /> */}
         </Segment>
       </div>
-      <CaseStudyHeader caseStudy={caseStudy[selectedStudy]} />
+      <CaseStudyHeader
+        caseStudy={caseStudy[selectedStudy]}
+        breadcrumbItems={breadcrumbItems}
+      />
     </>
   );
 }
 
-function CaseStudyHeader({ caseStudy }) {
+function CaseStudyHeader({ caseStudy, breadcrumbItems }) {
   const [selectedOption, setSelectedOption] = useState("tldr");
 
   return (
     <div>
-      <Breadcrumb title={caseStudy.title} />
+      <Breadcrumb items={breadcrumbItems} />
       <ArticleTitle title={caseStudy.title} />
       <div>
         <div className="key-impact">
@@ -97,17 +122,17 @@ function CaseStudyHeader({ caseStudy }) {
   );
 }
 
-function Breadcrumb({ title }) {
-  return (
-    <div className="breadcrumb">
-      <a href="/" className="breadcrumb__link">
-        Work
-      </a>{" "}
-      <span className="breadcrumb__divider">/</span>{" "}
-      <span className="breadcrumb__name">{title}</span>
-    </div>
-  );
-}
+// function Breadcrumb({ title }) {
+//   return (
+//     <div className="breadcrumb">
+//       <a href="/" className="breadcrumb__link">
+//         Work
+//       </a>{" "}
+//       <span className="breadcrumb__divider">/</span>{" "}
+//       <span className="breadcrumb__name">{title}</span>
+//     </div>
+//   );
+// }
 
 function ArticleTitle({ title }) {
   return <h1 className="article__title">{title}</h1>;

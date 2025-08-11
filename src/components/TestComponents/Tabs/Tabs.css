@@ -3,6 +3,7 @@
   border-radius: 8px;
   box-shadow: var(--shadow-stroked-md);
   overflow: hidden;
+  width: 800px;
 }
 
 .content__container {

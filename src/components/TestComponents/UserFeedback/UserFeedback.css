@@ -1,0 +1,20 @@
+.feedback__container {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-bg-secondary);
+  box-shadow: var(--shadow-stroked-md);
+}
+
+.feedback__author {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.feedback__items {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}

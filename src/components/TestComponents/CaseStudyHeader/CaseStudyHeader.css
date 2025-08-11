@@ -75,39 +75,7 @@
   text-wrap: balance;
   line-height: 3.5rem;
   margin-bottom: 2rem;
-}
-
-.breadcrumb__divider {
-  margin: 0 0.5rem;
-  font-size: 0.8125rem;
-  font-weight: var(--font-weight-medium);
-  color: var(--text-muted);
-  user-select: none;
-}
-
-.breadcrumb__name {
-  color: var(--text-primary);
-  font-family: var(--font-sans);
-  font-size: 0.8625rem;
-  font-weight: var(--font-weight-semibold);
-  line-height: 1.25rem;
-  letter-spacing: -0.015rem;
-  user-select: none;
-}
-
-.breadcrumb {
-  user-select: none;
-  margin-bottom: 2rem;
-}
-
-.breadcrumb__link {
-  color: var(--text-muted);
-  font-family: var(--font-sans);
-  font-size: 0.8625rem;
-  font-weight: var(--font-weight-semibold);
-  line-height: 1.25rem;
-  letter-spacing: -0.015rem;
-  text-decoration: none;
+  width: 720px;
 }
 
 .read-time {

@@ -1,5 +1,16 @@
 const houses = [
   {
+    addressLineOne: "4 Oak Tree Close",
+    town: "Sevenoaks",
+    postalCode: "TN13 2YU",
+    propertyType: "Detached",
+    beds: 4,
+    baths: 3,
+    price: 1550000,
+    isSold: false,
+    photo: "/houses/house10.jpg",
+  },
+  {
     addressLineOne: "35 Longhorn Road",
     town: "Tenterden",
     postalCode: "TN30 5RH",
@@ -97,17 +108,6 @@ const houses = [
     price: 995000,
     isSold: false,
     photo: "/houses/house9.jpg",
-  },
-  {
-    addressLineOne: "4 Oak Tree Close",
-    town: "Sevenoaks",
-    postalCode: "TN13 2YU",
-    propertyType: "Detached",
-    beds: 4,
-    baths: 3,
-    price: 1550000,
-    isSold: false,
-    photo: "/houses/house10.jpg",
   },
 ];
 

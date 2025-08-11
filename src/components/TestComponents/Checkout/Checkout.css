@@ -14,7 +14,7 @@
   border-radius: 8px;
   box-shadow: var(--shadow-stroked-md);
   overflow: hidden;
-  width: 80%;
+  width: 72%;
   margin: 0 auto;
 }
 
@@ -175,11 +175,8 @@ invalid-code p {
 }
 
 .pay {
-  height: 40px;
-  width: 140px;
   align-self: center;
   margin: 40px 0;
-  border-radius: 8px;
 }
 
 .vat__summary {

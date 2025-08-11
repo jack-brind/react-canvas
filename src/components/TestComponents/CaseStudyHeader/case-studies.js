@@ -98,4 +98,35 @@ export const caseStudy = [
     tldr: 3,
     deepDive: 9,
   },
+  {
+    title: "Boosting adoption through improved document approvals",
+    metadata: [
+      {
+        name: "Key impact",
+        value: "Increased adoption by 23%",
+        colour: "var(--text-yellow)",
+        icon: Impact,
+      },
+      {
+        name: "Role",
+        value: "Senior Product Designer at PandaDoc",
+        colour: "var(--text-blue)",
+        icon: Role,
+      },
+      {
+        name: "Team",
+        value: "1 PM, 1 Researcher, 3 Engineers",
+        colour: "var(--text-green)",
+        icon: Team,
+      },
+      {
+        name: "Timeline",
+        value: "5 months (2025-2026)",
+        colour: "var(--text-purple)",
+        icon: Timeline,
+      },
+    ],
+    tldr: 4,
+    deepDive: 12,
+  },
 ];

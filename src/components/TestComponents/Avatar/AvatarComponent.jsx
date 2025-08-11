@@ -33,7 +33,6 @@ const Avatar = ({
       className={`avatar avatar--${size} avatar--${colour} avatar--${intent} ${className} ${intent === "photo" ? "clip" : ""}`}
     >
       {renderAvatarContent()}
-
       {hasStatus && <div className="avatar__status"></div>}
     </div>
   );

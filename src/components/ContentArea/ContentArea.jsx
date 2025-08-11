@@ -1,4 +1,5 @@
 import "./ContentArea.css";
+import { useEffect } from "react";
 import EventCountdown from "../TestComponents/EventCountdown/EventCountdown";
 import ProfileCard from "../TestComponents/ProfileCard/ProfileCard";
 import HouseCards from "../TestComponents/HouseCards/HouseCards";
@@ -8,9 +9,10 @@ import Tabs from "../TestComponents/Tabs/Tabs";
 import { Avatars } from "../TestComponents/Avatar/Avatar.jsx";
 import Accordion from "../TestComponents/Accordion/Accordion";
 import Checkout from "../TestComponents/Checkout/Checkout";
-import ObjectCrud from "../TestComponents/ObjectCrud/ObjectCrud";
+import WeatherData from "../TestComponents/Weather/Weather";
 import CaseStudyHeaderComponent from "../TestComponents/CaseStudyHeader/CaseStudyHeader";
 import PricingComponent from "../TestComponents/Pricing/Pricing";
+import UserFeedbackComponent from "../TestComponents/UserFeedback/UserFeedback";
 
 function ContentArea({ currentPage }) {
   const pageComponents = {
@@ -23,10 +25,31 @@ function ContentArea({ currentPage }) {
     navBar: <NavigationBar />,
     accordion: <Accordion />,
     checkout: <Checkout />,
-    objectCrud: <ObjectCrud />,
+    weather: <WeatherData />,
     caseStudyHeader: <CaseStudyHeaderComponent />,
     pricing: <PricingComponent />,
+    userFeedback: <UserFeedbackComponent />,
   };
+  useEffect(() => {
+    // Set the document title based on the current page
+    const captions = {
+      houseCards: "House Cards",
+      tabs: "Tabs",
+      eventCountdown: "Event Countdown",
+      shoppingList: "Shopping List",
+      profileCard: "Profile Card",
+      avatar: "Avatars",
+      navBar: "Navigation Bar",
+      accordion: "Accordion",
+      checkout: "Checkout",
+      weather: "Weather",
+      caseStudyHeader: "Case Study Header",
+      pricing: "Pricing",
+      userFeedback: "User Feedback",
+    };
+    document.title = captions[currentPage] || "React Canvas";
+  }, [currentPage]);
+
   return (
     <div className="floating__content">
       <div className="floating__content--content">

@@ -46,7 +46,7 @@
   flex-shrink: 0;
   color: var(--colour-pandadoc);
   margin-top: 5px;
-  stroke-width: 2.5px;
+  strokewidth: 2.5px;
 }
 
 .price__option {

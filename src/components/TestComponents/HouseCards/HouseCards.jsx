@@ -79,8 +79,6 @@ function Houses() {
 
   return (
     <>
-      <Rating icon="heart" />
-
       <House {...house} />
 
       <div className="nav__buttons">
@@ -108,7 +106,7 @@ function Houses() {
           marginTop: "56px",
         }}
       >
-        <Button leadingIcon={<Airplay />} label="Airplay" size="sm" />
+        <Button leadingIcon={<Airplay />} label="Airplay" />
         <Button trailingIcon={<ChevronDown />} label="Environment" />
         <Button
           leadingIcon={<ChartPie />}
@@ -128,7 +126,6 @@ function Houses() {
         <Button type="primary" leadingIcon={<Check />} label="Submit" />
         <Button
           type="primary"
-          size="sm"
           trailingIcon={<ArrowRight />}
           label="Open library"
         />
@@ -173,6 +170,7 @@ function Houses() {
         <Button type="destructive" leadingIcon={<Trash2 />} label="Delete" />
         <Button type="destructive" label="Discard" />
       </div>
+      <Rating />
     </>
   );
 }

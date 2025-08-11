@@ -52,8 +52,12 @@
 }
 
 .icon-button__md {
-  padding: 8px;
+  display: flex;
   border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
 }
 
 .icon-button__md > * {
@@ -64,6 +68,8 @@
 .icon-button__sm {
   padding: 6px;
   border-radius: 6px;
+  width: 24px;
+  height: 24px;
 }
 
 .icon-button__sm > * {
@@ -74,6 +80,8 @@
 .icon-button__xs {
   padding: 6px;
   border-radius: 4px;
+  /* width: 20px;
+  height: 20px; */
 }
 
 .icon-button__xs > * {

@@ -1,0 +1,35 @@
+.breadcrumb,
+.breadcrumb__items {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+}
+
+.breadcrumb__items {
+  margin-bottom: 2rem;
+}
+
+.breadcrumb__divider {
+  color: var(--text-muted);
+}
+
+.breadcrumb__name {
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.8625rem;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25rem;
+  letter-spacing: -0.015rem;
+  user-select: none;
+}
+
+.breadcrumb__link {
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.8625rem;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25rem;
+  letter-spacing: -0.015rem;
+  text-decoration: none;
+}

@@ -12,6 +12,7 @@ import IconButton from "../../IconButton/IconButton";
 import Banner from "../../Banner/Banner";
 import { IoInformationCircleSharp } from "react-icons/io5";
 import Tick from "../../../assets/icons/Tick";
+import Button from "../../Button/Button";
 
 // ============ Housing component ============
 export default function Checkout() {
@@ -265,9 +266,7 @@ function DiscountCodes({ codes, onDiscountApply, basketQuantity }) {
             onChange={handleCodeInput}
             value={discountCode}
           />
-          <button className="apply-button" onClick={handleApplyCode}>
-            Apply
-          </button>
+          <Button onClick={handleApplyCode} type="primary" label="Apply" />
 
           {hasAttempted && (
             <span>
@@ -326,12 +325,22 @@ function BasketTotal({ total, vat }) {
 // Basket pay component
 function Pay({ total, basketQuantity }) {
   return (
-    <button
+    <Button
+      type="primary"
+      label={`Pay ${currencyDisplay(total)}`}
+      size="lg"
       disabled={basketQuantity === 0}
-      className="apply-button pay"
       onClick={() =>
         alert(`✓ Payment successful – ${currencyDisplay(total)} paid!`)
       }
-    >{`Pay ${currencyDisplay(total)}`}</button>
+      className="pay"
+    />
+    // <button
+    //   disabled={basketQuantity === 0}
+    //   className="apply-button pay"
+    //   onClick={() =>
+    //     alert(`✓ Payment successful – ${currencyDisplay(total)} paid!`)
+    //   }
+    // >{`Pay ${currencyDisplay(total)}`}</button>
   );
 }

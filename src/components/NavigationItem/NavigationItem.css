@@ -30,7 +30,7 @@
 }
 
 .active svg {
-  color: var(--colour-brand);
+  color: var(--text-primary);
 }
 
 .nav-links:hover:not(.active) {

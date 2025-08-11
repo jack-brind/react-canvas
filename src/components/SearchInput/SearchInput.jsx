@@ -15,7 +15,6 @@ function SearchInput({
     display: "flex",
     alignItems: "center",
     padding: "0.4rem 0.5rem 0.4rem 1.75rem",
-    marginBottom: "var(--spacing-9)",
     background: "var(--background-component-default)",
     borderRadius: "var(--radius-md)",
   };

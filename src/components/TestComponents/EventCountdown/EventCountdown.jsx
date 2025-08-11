@@ -7,6 +7,7 @@ import { Star, RefreshCcw } from "lucide-react";
 import { TbMobiledata, TbRotateClockwise2 } from "react-icons/tb";
 import { useState } from "react";
 import SearchInput from "../../SearchInput/SearchInput";
+import Checkbox from "../../Checkbox/Checkbox";
 
 // Day calculation helper
 function getDays(date) {
@@ -17,7 +18,7 @@ function getDays(date) {
 function EventCountdown() {
   const currentPageData = pages.find((page) => page.link === "eventCountdown");
   const [term, setTerm] = useState("");
-  const [showOldEvents, setShowOldEvents] = useState(true);
+  const [showOldEvents, setShowOldEvents] = useState(false);
 
   return (
     <>
@@ -27,22 +28,37 @@ function EventCountdown() {
         subtitle="This component is a series of Countdown cards that countdown to an event. This uses date-fns for calculating dates and eventually, will have some filters and a way to favourite cards which will be displayed in a separate section."
       />
 
-      <SearchInput
-        searchTerm={term}
-        onSearchChange={setTerm}
-        placeholder="Filter by name..."
-        width="340px"
-      />
-
-      <div className="checkbox">
-        <input
-          type="checkbox"
-          id="old-events"
-          name="old-events"
-          checked={showOldEvents}
-          onChange={(e) => setShowOldEvents(e.target.checked)}
+      <div className="event__filters">
+        <SearchInput
+          searchTerm={term}
+          onSearchChange={setTerm}
+          placeholder="Filter by name..."
+          width="340px"
         />
-        <label htmlFor="old-events">Show old events</label>
+        <Checkbox />
+        <div className="checkbox-wrapper-4">
+          <input
+            type="checkbox"
+            class="inp-cbx"
+            id="old-events"
+            name="old-events"
+            checked={showOldEvents}
+            onChange={(e) => setShowOldEvents(e.target.checked)}
+          />
+          <label class="cbx" htmlFor="old-events">
+            <span>
+              <svg width="12px" height="10px">
+                <use xlink:href="#check-4"></use>
+              </svg>
+            </span>
+            <span>Show old events</span>
+          </label>
+          <svg class="inline-svg">
+            <symbol id="check-4" viewbox="0 0 12 10">
+              <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+            </symbol>
+          </svg>
+        </div>
       </div>
 
       <Events term={term} oldEvents={showOldEvents} />
@@ -87,9 +103,9 @@ function Event({ name, date, days, categories, photo, repeats }) {
     <div className={`event__container ${days < 0 ? "disabled" : ""}`}>
       <div>
         <img src={photo} />
-        <button className="toggle">
+        {/* <button className="toggle">
           <Star />
-        </button>
+        </button> */}
       </div>
       <div className="content">
         <div className="event__details">
