@@ -1,0 +1,16 @@
+.stacked__container {
+  display: flex;
+  align-items: center;
+  transition: 0.1s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+.stacked__container .avatar-item {
+  margin-left: -12px;
+  outline: 4px solid white;
+  transition: 0.1s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+.stacked__container:hover {
+  gap: 20px;
+  transition: 0.1s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}

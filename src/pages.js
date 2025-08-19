@@ -12,6 +12,8 @@ import {
   Coins,
   MessagesSquare,
   CloudSun,
+  Users,
+  LogIn,
 } from "lucide-react";
 
 import { TbShoppingCart, TbChecklist } from "react-icons/tb";
@@ -81,6 +83,16 @@ const pages = [
     link: "userFeedback",
     caption: "User Feedback",
     icon: MessagesSquare,
+  },
+  {
+    link: "stackedAvatars",
+    caption: "Stacked Avatars",
+    icon: Users,
+  },
+  {
+    link: "loginSignup",
+    caption: "Login / Sign up",
+    icon: LogIn,
   },
 ];
 

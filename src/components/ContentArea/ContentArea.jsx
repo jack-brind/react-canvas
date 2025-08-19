@@ -13,6 +13,8 @@ import WeatherData from "../TestComponents/Weather/Weather";
 import CaseStudyHeaderComponent from "../TestComponents/CaseStudyHeader/CaseStudyHeader";
 import PricingComponent from "../TestComponents/Pricing/Pricing";
 import UserFeedbackComponent from "../TestComponents/UserFeedback/UserFeedback";
+import StackedAvatarComponent from "../TestComponents/StackedAvatars/StackedAvatars";
+import LoginSignup from "../TestComponents/LoginSignup/LoginSignup";
 
 function ContentArea({ currentPage }) {
   const pageComponents = {
@@ -29,6 +31,8 @@ function ContentArea({ currentPage }) {
     caseStudyHeader: <CaseStudyHeaderComponent />,
     pricing: <PricingComponent />,
     userFeedback: <UserFeedbackComponent />,
+    stackedAvatars: <StackedAvatarComponent />,
+    loginSignup: <LoginSignup />,
   };
   useEffect(() => {
     // Set the document title based on the current page
@@ -46,6 +50,8 @@ function ContentArea({ currentPage }) {
       caseStudyHeader: "Case Study Header",
       pricing: "Pricing",
       userFeedback: "User Feedback",
+      stackedAvatars: "Stacked Avatars",
+      loginSignup: "Login / Sign up",
     };
     document.title = captions[currentPage] || "React Canvas";
   }, [currentPage]);

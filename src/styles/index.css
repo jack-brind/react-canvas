@@ -271,9 +271,11 @@
 
   input[type="text"],
   input[type="number"],
+  input[type="email"],
+  input[type="password"],
   textarea {
     border: none;
-    background: transparent;
+    background: var(--background-component-default);
     margin: 0;
     outline: 0px solid var(--border-default);
     border-radius: 6px;
@@ -291,6 +293,12 @@
   input[type="text"]:hover,
   input[type="text"]:active,
   input[type="text"]:focus,
+  input[type="password"]:hover,
+  input[type="password"]:active,
+  input[type="password"]:focus,
+  input[type="email"]:hover,
+  input[type="email"]:active,
+  input[type="email"]:focus,
   input[type="number"]:hover,
   input[type="number"]:active,
   input[type="number"]:focus {
@@ -299,6 +307,8 @@
   }
 
   input[type="text"]::placeholder,
+  input[type="password"]::placeholder,
+  input[type="email"]::placeholder,
   input[type="number"]::placeholder {
     color: #90959d;
     outline: var(--debug-outlines) dashed fuchsia;
