@@ -167,6 +167,44 @@ export function Avatars() {
         value={value}
         placeholder="Enter full name..."
       />
+      <StackedAvatars />
     </>
+  );
+}
+
+function StackedAvatars() {
+  return (
+    <div className="stacked__container">
+      <Avatar
+        className="avatar-item"
+        size="2xl"
+        intent="photo"
+        photo={generateRandomFace()}
+      />
+      <Avatar
+        className="avatar-item"
+        size="2xl"
+        intent="photo"
+        photo={generateRandomFace()}
+      />
+      <Avatar
+        className="avatar-item"
+        size="2xl"
+        intent="photo"
+        photo={generateRandomFace()}
+      />
+      <Avatar
+        className="avatar-item"
+        size="2xl"
+        intent="photo"
+        photo={generateRandomFace()}
+      />
+      <Avatar
+        className="avatar-item"
+        size="2xl"
+        intent="photo"
+        photo={generateRandomFace()}
+      />
+    </div>
   );
 }

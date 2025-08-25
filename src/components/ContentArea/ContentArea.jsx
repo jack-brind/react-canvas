@@ -13,7 +13,7 @@ import WeatherData from "../TestComponents/Weather/Weather";
 import CaseStudyHeaderComponent from "../TestComponents/CaseStudyHeader/CaseStudyHeader";
 import PricingComponent from "../TestComponents/Pricing/Pricing";
 import UserFeedbackComponent from "../TestComponents/UserFeedback/UserFeedback";
-import StackedAvatarComponent from "../TestComponents/StackedAvatars/StackedAvatars";
+import MoneyFormatComponent from "../TestComponents/MoneyFormat/MoneyFormat";
 import LoginSignup from "../TestComponents/LoginSignup/LoginSignup";
 
 function ContentArea({ currentPage }) {
@@ -31,7 +31,7 @@ function ContentArea({ currentPage }) {
     caseStudyHeader: <CaseStudyHeaderComponent />,
     pricing: <PricingComponent />,
     userFeedback: <UserFeedbackComponent />,
-    stackedAvatars: <StackedAvatarComponent />,
+    moneyFormat: <MoneyFormatComponent />,
     loginSignup: <LoginSignup />,
   };
   useEffect(() => {

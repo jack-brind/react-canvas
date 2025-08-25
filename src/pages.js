@@ -14,6 +14,7 @@ import {
   CloudSun,
   Users,
   LogIn,
+  Wallet,
 } from "lucide-react";
 
 import { TbShoppingCart, TbChecklist } from "react-icons/tb";
@@ -85,14 +86,14 @@ const pages = [
     icon: MessagesSquare,
   },
   {
-    link: "stackedAvatars",
-    caption: "Stacked Avatars",
-    icon: Users,
+    link: "loginSignup",
+    caption: "Log in / Sign up",
+    icon: LogIn,
   },
   {
-    link: "loginSignup",
-    caption: "Login / Sign up",
-    icon: LogIn,
+    link: "moneyFormat",
+    caption: "Money format",
+    icon: Wallet,
   },
 ];
 

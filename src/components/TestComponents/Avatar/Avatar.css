@@ -219,3 +219,26 @@
     black 2px
   );
 } */
+
+.stacked__container {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  transition: all 0.2s cubic-bezier(0, 0, 0.3, 1);
+  outline: 1px dashed fuchsia;
+  width: fit-content;
+  margin-top: 80px;
+}
+
+.stacked__container > .avatar-item {
+  outline: 4px solid white;
+}
+
+.avatar-item {
+  margin-left: -12px;
+}
+
+.stacked__container:hover {
+  gap: 12%;
+  transition: all 0.2s cubic-bezier(0, 0, 0.3, 1);
+}

@@ -1,6 +1,8 @@
 import IconButton from "../IconButton/IconButton.jsx";
 import { EyeOff, Eye, Check, X } from "lucide-react";
 import { useState } from "react";
+import zxcvbn from "zxcvbn";
+import language from "../../Constants/language.js";
 
 function PasswordRule({ type, quantity, isMet }) {
   return (
@@ -15,9 +17,35 @@ function PasswordRule({ type, quantity, isMet }) {
   );
 }
 
-function PasswordInput({ hasRules }) {
+function PasswordStrengthMeter({ password }) {
+  const score = zxcvbn(password).score;
+
+  return (
+    <div className="strength__container">
+      <div
+        className="strength-segment"
+        style={{
+          background: `${score <= 1 ? "var(--text-red)" : score > 1 && score <= 3 ? "var(--text-orange)" : score === 4 ? "var(--text-green)" : "var(--background-grey-subtle)"}`,
+        }}
+      ></div>
+      <div
+        className="strength-segment"
+        style={{
+          background: `${score > 1 && score <= 3 ? "var(--text-orange)" : score === 4 ? "var(--text-green)" : "var(--background-grey-subtle)"}`,
+        }}
+      ></div>
+      <div
+        className="strength-segment"
+        style={{
+          background: `${score === 4 ? "var(--text-green)" : "var(--background-grey-subtle)"}`,
+        }}
+      ></div>
+    </div>
+  );
+}
+
+function PasswordInput({ hasRules, password, onPasswordChanged, hasStrength }) {
   const [showPassword, setShowPassword] = useState(false);
-  const [password, setPassword] = useState("");
 
   const passwordRules = {
     length: 8,
@@ -39,10 +67,6 @@ function PasswordInput({ hasRules }) {
     e.preventDefault();
   }
 
-  function handlePasswordChange(e) {
-    setPassword(e.target.value);
-  }
-
   const inputStyle = {
     display: "flex",
     alignItems: "center",
@@ -52,19 +76,26 @@ function PasswordInput({ hasRules }) {
   return (
     <div className="password__group">
       <div className="password-container">
+        {hasStrength && password.length > 0 && (
+          <PasswordStrengthMeter
+            className="password__strength"
+            password={password}
+          />
+        )}
         <input
           type={showPassword ? "text" : "password"}
-          placeholder="Enter password..."
-          autocomplete="new-password"
+          placeholder={language.placeholder.password}
+          autoComplete="new-password"
           style={inputStyle}
           value={password}
-          onChange={handlePasswordChange}
+          onChange={onPasswordChanged}
         />
         <IconButton
           onClick={handlePasswordToggle}
-          size="xs"
+          size="md"
           isMuted
           className="password__toggle"
+          style={{ zIndex: "20" }}
           icon={showPassword ? <Eye /> : <EyeOff />}
         />
       </div>

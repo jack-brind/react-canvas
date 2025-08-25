@@ -62,6 +62,7 @@ function Weather() {
   const dubai = [25.188053, 55.250898];
   const singapore = [1.2868, 103.8545];
   const sydney = [-33.861106, 151.210941];
+  const warsaw = [52.2348, 21.009141];
 
   // State variables
   const [selectedLocation, setSelectedLocation] = useState(home);
@@ -178,6 +179,11 @@ function Weather() {
             text="🇦🇺 Sydney"
             active={selectedLocation === sydney}
             onClick={() => handleLocationSelection(sydney)}
+          />
+          <SegmentOption
+            text="🇵🇱 Warsaw"
+            active={selectedLocation === warsaw}
+            onClick={() => handleLocationSelection(warsaw)}
           />
         </Segment>
       </div>

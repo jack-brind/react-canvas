@@ -1,6 +1,11 @@
-function TextInput({ placeholder = "", defaultValue = "" }) {
+function TextInput({ placeholder = "", value, onChange }) {
   return (
-    <input type="text" placeholder={placeholder} defaultValue={defaultValue} />
+    <input
+      type="text"
+      placeholder={placeholder}
+      value={value}
+      onChange={onChange}
+    />
   );
 }
 

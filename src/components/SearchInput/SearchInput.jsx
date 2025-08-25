@@ -13,6 +13,8 @@ function SearchInput({
   const searchStyle = {
     width: "100%",
     display: "flex",
+    height: "32px",
+    zIndex: "0",
     alignItems: "center",
     padding: "0.4rem 0.5rem 0.4rem 1.75rem",
     background: "var(--background-component-default)",
