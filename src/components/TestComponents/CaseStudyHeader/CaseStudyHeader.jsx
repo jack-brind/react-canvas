@@ -10,6 +10,7 @@ import {
   RectangleEllipsis,
   LibraryBig,
   CircleCheckBig,
+  Target,
 } from "lucide-react";
 import { Icon } from "lucide-react";
 import Tldr from "../../../assets/icons/Tldr";
@@ -38,14 +39,14 @@ export default function CaseStudyHeaderComponent() {
       <PageContent
         icon={<currentPageData.icon size={32} />}
         title={currentPageData.caption}
-        subtitle="The header / frontmatter for case studies on my portfolio including a segment component to switch between the short and long version of the case study."
+        subtitle="The header for case studies on my personal site including a segment component to switch between the short and long version of the case study."
       />
       <h3>Case study</h3>
       <div className="case-study__selection">
         <Segment>
           <SegmentOption
-            icon={<Coins size={12} />}
-            text="Global rates"
+            icon={<Target size={12} />}
+            text="Recruiter KPIs"
             active={selectedStudy === 0}
             onClick={() => handleCaseStudySelection(0)}
           />
@@ -61,12 +62,6 @@ export default function CaseStudyHeaderComponent() {
             active={selectedStudy === 2}
             onClick={() => handleCaseStudySelection(2)}
           />
-          {/* <SegmentOption
-            icon={<CircleCheckBig size={12} />}
-            text="Approvals"
-            active={selectedStudy === 3}
-            onClick={() => handleCaseStudySelection(3)}
-          /> */}
         </Segment>
       </div>
       <CaseStudyHeader

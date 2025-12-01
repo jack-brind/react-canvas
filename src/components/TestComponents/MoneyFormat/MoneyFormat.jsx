@@ -10,7 +10,7 @@ function MoneyFormatComponent() {
       <PageContent
         icon={<currentPageData.icon size={32} />}
         title={currentPageData.caption}
-        subtitle="A component to choose your format to display money with plenty of different options."
+        subtitle="TBC – Component to choose your format to display money with lots of different options."
       />
       <MoneyFormat />
     </>

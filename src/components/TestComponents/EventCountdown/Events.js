@@ -69,7 +69,7 @@ export const events = [
   },
   {
     eventName: "Grand Theft Auto 6",
-    date: new Date(2026, 4, 26),
+    date: new Date(2026, 10, 19),
     categories: [eventCategories[6], eventCategories[8]],
     photo: "/events/gta6.png",
     isFavourite: false,

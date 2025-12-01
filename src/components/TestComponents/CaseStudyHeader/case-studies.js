@@ -6,11 +6,11 @@ import Timeline from "../../../assets/icons/Timeline";
 
 export const caseStudy = [
   {
-    title: "Streamlining pay rate updates for staffing agencies",
+    title: "Giving recruiters a way to track their performance and KPIs",
     metadata: [
       {
         name: "Key impact",
-        value: "Addressed £336k contract value risk",
+        value: "Addressed £1.4m ARR churn risk",
         colour: "var(--text-yellow)",
         icon: Impact,
       },
@@ -28,7 +28,7 @@ export const caseStudy = [
       },
       {
         name: "Timeline",
-        value: "6 months (2023-2024)",
+        value: "5 months (2024-2025)",
         colour: "var(--text-purple)",
         icon: Timeline,
       },
@@ -59,7 +59,7 @@ export const caseStudy = [
       },
       {
         name: "Timeline",
-        value: "4 months (2024)",
+        value: "2 months (2024)",
         colour: "var(--text-purple)",
         icon: Timeline,
       },
@@ -97,36 +97,5 @@ export const caseStudy = [
     ],
     tldr: 3,
     deepDive: 9,
-  },
-  {
-    title: "Boosting adoption through improved document approvals",
-    metadata: [
-      {
-        name: "Key impact",
-        value: "Increased adoption by 23%",
-        colour: "var(--text-yellow)",
-        icon: Impact,
-      },
-      {
-        name: "Role",
-        value: "Senior Product Designer at PandaDoc",
-        colour: "var(--text-blue)",
-        icon: Role,
-      },
-      {
-        name: "Team",
-        value: "1 PM, 1 Researcher, 3 Engineers",
-        colour: "var(--text-green)",
-        icon: Team,
-      },
-      {
-        name: "Timeline",
-        value: "5 months (2025-2026)",
-        colour: "var(--text-purple)",
-        icon: Timeline,
-      },
-    ],
-    tldr: 4,
-    deepDive: 12,
   },
 ];

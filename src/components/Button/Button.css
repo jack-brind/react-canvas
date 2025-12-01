@@ -3,7 +3,6 @@
   flex-shrink: 0;
   height: fit-content;
   width: fit-content;
-  transition: background 0.2s ease;
 }
 
 .Button:hover {

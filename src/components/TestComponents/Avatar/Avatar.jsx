@@ -67,7 +67,7 @@ export function Avatars() {
       <PageContent
         icon={<currentPageData.icon size={32} />}
         title={currentPageData.caption}
-        subtitle="Avatar component with different intents, colours, sizes, etc. This also uses state to capture the initials typed in at the bottom. This is the first resuable component I have created."
+        subtitle="Avatar component with different intents, colours, sizes, etc. This also uses state to capture the initials typed in at the bottom and splits the name parts into the most likely first and last name, taking into account middle names and double barrelled names. This is the first resuable component I have created."
       />
       <div style={{ display: "flex", gap: "16px", margin: "0 0 40px 0" }}>
         <Avatar intent="initials" initials={initials} size="xl" colour="blue" />

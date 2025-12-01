@@ -18,7 +18,7 @@ function getDays(date) {
 function EventCountdown() {
   const currentPageData = pages.find((page) => page.link === "eventCountdown");
   const [term, setTerm] = useState("");
-  const [showOldEvents, setShowOldEvents] = useState(false);
+  //const [showOldEvents, setShowOldEvents] = useState(false);
 
   return (
     <>
@@ -35,7 +35,7 @@ function EventCountdown() {
           placeholder="Filter by name..."
           width="340px"
         />
-        <Checkbox />
+        {/* <Checkbox />
         <div className="checkbox-wrapper-4">
           <input
             type="checkbox"
@@ -58,10 +58,10 @@ function EventCountdown() {
               <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
             </symbol>
           </svg>
-        </div>
+        </div> */}
       </div>
 
-      <Events term={term} oldEvents={showOldEvents} />
+      <Events term={term} />
     </>
   );
 }

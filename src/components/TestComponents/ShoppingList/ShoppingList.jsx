@@ -16,7 +16,7 @@ function ShoppingChecklist() {
       <PageContent
         icon={<currentPageData.icon size={32} />}
         title={currentPageData.caption}
-        subtitle="This component is a simple shopping list."
+        subtitle="This component is a simple shopping list. You can add items, check them off and see how many items you have checked off, still need to check off and a percentage checked."
       />
       <ShoppingList />
     </>

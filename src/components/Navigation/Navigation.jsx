@@ -14,9 +14,23 @@ function Navigation({ currentPage, onPageChange }) {
   return (
     <nav>
       <div className="nav__header">
-        <div className="nav__logo">
-          <img src="/react.svg" className="nav__logo--image" />
-          <span className="nav__logo--name">React Canvas</span>
+        <div className="nav__header--layout">
+          <div className="nav__logo">
+            <img src="/react.svg" className="nav__logo--image" />
+            <span className="nav__logo--name">React Canvas</span>
+          </div>
+          <button class="github">
+            <a
+              href="https://github.com/jack-brind/react-canvas"
+              target="_blank"
+            >
+              <img
+                src="/github.svg"
+                alt="GitHub repo for React Canvas"
+                style={{ width: "16px", height: "16px" }}
+              />
+            </a>
+          </button>
         </div>
         <SearchInput
           searchTerm={term}

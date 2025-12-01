@@ -119,11 +119,15 @@ function UserData({ data, selectedIndex, onNavigateToManager }) {
       </div>
       <div className="user-card__data">
         <h2 className="user-card__label">Phone</h2>
-        <a className='proto__link' href={`tel:${currentUser.phone}`}>{currentUser.phone}</a>
+        <a className="proto__link" href={`tel:${currentUser.phone}`}>
+          {currentUser.phone}
+        </a>
       </div>
       <div className="user-card__data">
         <h2 className="user-card__label">Email</h2>
-        <a className='proto__link' href={`mailto:${currentUser.email}`}>{currentUser.email}</a>
+        <a className="proto__link" href={`mailto:${currentUser.email}`}>
+          {currentUser.email}
+        </a>
       </div>
       <div className="user-card__data">
         <h2 className="user-card__label">Department</h2>
@@ -239,7 +243,7 @@ function ProfileCard() {
       <PageContent
         icon={<currentPageData.icon size={32} />}
         title={currentPageData.caption}
-        subtitle="Profile cards for different users"
+        subtitle="Profile cards for different users in an organisation. Uses a transition effect on the list and displays the currently selected user's details with options to navigate to their manager."
       />
       <div className="user-data-container">
         <UserList

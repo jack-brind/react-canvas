@@ -33,7 +33,7 @@ export default function NavigationBar() {
         className="nav-page"
         icon={<currentPageData.icon size={32} />}
         title={currentPageData.caption}
-        subtitle="This component forms the basis of the new NavBar component in my new React / Next.js based portfolio site in the future. This will have options to change the breakpoint sizes and have fully responsive behaviour on mobile."
+        subtitle="This component forms the basis of the new NavBar component in my new React / Next.js based peronal site in the future. This has options to change the breakpoint sizes and have fully responsive behaviour on mobile using @container queries."
       />
       <h3>Breakpoints</h3>
       <div className="breakpoint-sizes">

@@ -11,7 +11,7 @@ import language from "../../../Constants/language";
 
 function LoginSignup() {
   const currentPageData = pages.find((page) => page.link === "loginSignup");
-  const [newCustomer, setNewCustomer] = useState(false);
+  const [newCustomer, setNewCustomer] = useState(true);
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -89,7 +89,7 @@ function LoginSignup() {
       <PageContent
         icon={<currentPageData.icon size={32} />}
         title={currentPageData.caption}
-        subtitle="A simple log in / sign up flow that users can switch between."
+        subtitle="A simple log in / sign up flow that users can switch between. For sign up, emails are validated (although needs improvement), passwords can be revealed and there are also password rules which include a strength rating from zxcvbn. Creating a new user adds them to the console. You can also log in with a new or existing account."
       />
       <div className="form__container">
         <form>

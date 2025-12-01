@@ -12,7 +12,6 @@
 .icon-button__ghost {
   background: transparent;
   color: var(--text-secondary);
-  transition: background 0.2s ease;
 }
 
 .icon-button__ghost:hover {
@@ -24,7 +23,6 @@
   background: var(--background-component-default);
   color: var(--text-secondary);
   box-shadow: var(--shadow-stroked-sm);
-  transition: background 0.2s ease;
 }
 
 .icon-button__default:hover {
@@ -35,7 +33,6 @@
 .icon-button__alpha {
   background: transparent;
   color: var(--text-secondary);
-  transition: background 0.2s ease;
 }
 
 .icon-button__alpha:hover {
